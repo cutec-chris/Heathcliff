@@ -1,0 +1,390 @@
+object FormColors: TFormColors
+  Left = 638
+  Top = 101
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Choose colors'
+  ClientHeight = 175
+  ClientWidth = 454
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  HelpFile = 'Heathcliff.hlp'
+  Position = poMainFormCenter
+  PixelsPerInch = 96
+  object pcColors: TPageControl
+    Left = 3
+    Top = 3
+    Width = 348
+    Height = 169
+    ActivePage = tabColors
+    Align = alLeft
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    TabOrder = 0
+    object tabColors: TTabSheet
+      Caption = 'Frame colors'
+      object groupFrameColors: TGroupBox
+        Left = 3
+        Top = 3
+        Width = 334
+        Height = 105
+        Align = alTop
+        Caption = ' Frame colors '
+        TabOrder = 0
+        object imgBack0: TImage
+          Left = 238
+          Top = 18
+          Width = 22
+          Height = 22
+          OnClick = imgBack0Click
+        end
+        object imgNorm0: TImage
+          Left = 190
+          Top = 18
+          Width = 22
+          Height = 22
+          OnClick = imgNorm0Click
+        end
+        object imgReal0: TImage
+          Left = 214
+          Top = 18
+          Width = 22
+          Height = 22
+          OnClick = imgReal0Click
+        end
+        object imgNorm1: TImage
+          Left = 190
+          Top = 42
+          Width = 22
+          Height = 22
+          OnClick = imgNorm1Click
+        end
+        object imgReal1: TImage
+          Left = 214
+          Top = 42
+          Width = 22
+          Height = 22
+          OnClick = imgReal1Click
+        end
+        object imgBack1: TImage
+          Left = 238
+          Top = 42
+          Width = 22
+          Height = 22
+          OnClick = imgBack1Click
+        end
+        object imgSel1: TImage
+          Left = 262
+          Top = 42
+          Width = 22
+          Height = 22
+          OnClick = imgSel1Click
+        end
+        object imgSel0: TImage
+          Left = 262
+          Top = 18
+          Width = 22
+          Height = 22
+          OnClick = imgSel0Click
+        end
+        object imgLink0: TImage
+          Left = 286
+          Top = 18
+          Width = 22
+          Height = 22
+          OnClick = imgLink0Click
+        end
+        object imgLink1: TImage
+          Left = 286
+          Top = 42
+          Width = 22
+          Height = 22
+          OnClick = imgLink1Click
+        end
+        object stFrameColorLinks: TStaticText
+          Left = 278
+          Top = 0
+          Width = 37
+          Height = 17
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'Links'
+          TabOrder = 6
+        end
+        object stFrameColorNormal: TStaticText
+          Left = 182
+          Top = 0
+          Width = 41
+          Height = 17
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'Normal'
+          TabOrder = 4
+        end
+        object stFrameColor0: TStaticText
+          Left = 14
+          Top = 22
+          Width = 46
+          Height = 17
+          Caption = 'Color &0:'
+          FocusControl = editColor0
+          TabOrder = 2
+        end
+        object stFrameColor1: TStaticText
+          Left = 14
+          Top = 46
+          Width = 46
+          Height = 17
+          Caption = 'Color &1:'
+          FocusControl = editColor1
+          TabOrder = 3
+        end
+        object editColor0: TEdit
+          Left = 62
+          Top = 18
+          Width = 121
+          Height = 21
+          TabOrder = 0
+          Text = 'Red'
+        end
+        object editColor1: TEdit
+          Left = 62
+          Top = 42
+          Width = 121
+          Height = 21
+          TabOrder = 1
+          Text = 'Blue'
+        end
+        object stFrameColorRound: TStaticText
+          Left = 206
+          Top = 66
+          Width = 41
+          Height = 17
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'Round'
+          TabOrder = 5
+        end
+        object stFrameColorBack: TStaticText
+          Left = 230
+          Top = 0
+          Width = 37
+          Height = 17
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'Back'
+          TabOrder = 7
+        end
+        object stFrameColorName: TStaticText
+          Left = 62
+          Top = 0
+          Width = 57
+          Height = 17
+          Caption = 'Color name'
+          TabOrder = 8
+        end
+        object stFrameColorSelected: TStaticText
+          Left = 256
+          Top = 66
+          Width = 39
+          Height = 17
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'Sel'
+          TabOrder = 9
+        end
+      end
+    end
+    object tabTimeline: TTabSheet
+      Caption = 'Timeline colors'
+      ImageIndex = 2
+      object groupTimeline: TGroupBox
+        Left = 3
+        Top = 3
+        Width = 334
+        Height = 121
+        Align = alTop
+        Caption = ' Timeline colors '
+        TabOrder = 0
+        object imgTimelineLines: TImage
+          Left = 6
+          Top = 5
+          Width = 22
+          Height = 22
+          OnClick = imgTimelineLinesClick
+        end
+        object imgTimelineAreas: TImage
+          Left = 6
+          Top = 29
+          Width = 22
+          Height = 22
+          OnClick = imgTimelineAreasClick
+        end
+        object imgTimelineText: TImage
+          Left = 6
+          Top = 53
+          Width = 22
+          Height = 22
+          OnClick = imgTimelineTextClick
+        end
+        object imgTimelineBack: TImage
+          Left = 6
+          Top = 77
+          Width = 22
+          Height = 22
+          OnClick = imgTimelineBackClick
+        end
+        object stTimelineLines: TStaticText
+          Left = 38
+          Top = 10
+          Width = 64
+          Height = 17
+          Caption = 'Color of lines'
+          TabOrder = 0
+        end
+        object stTimelineAreas: TStaticText
+          Left = 38
+          Top = 34
+          Width = 69
+          Height = 17
+          Caption = 'Color of areas'
+          TabOrder = 1
+        end
+        object stTimelineText: TStaticText
+          Left = 38
+          Top = 58
+          Width = 122
+          Height = 17
+          Caption = 'Text && time divider color'
+          TabOrder = 2
+        end
+        object stTimelineBack: TStaticText
+          Left = 38
+          Top = 82
+          Width = 88
+          Height = 17
+          Caption = 'Background color'
+          TabOrder = 3
+        end
+      end
+    end
+    object tabOthers: TTabSheet
+      Caption = 'Other colors'
+      ImageIndex = 1
+      object groupTextColors: TGroupBox
+        Left = 3
+        Top = 3
+        Width = 334
+        Height = 121
+        Align = alTop
+        Caption = ' Other colors '
+        TabOrder = 0
+        object imgThumbText: TImage
+          Left = 6
+          Top = 5
+          Width = 22
+          Height = 22
+          OnClick = imgThumbTextClick
+        end
+        object imgBackGround: TImage
+          Left = 6
+          Top = 29
+          Width = 22
+          Height = 22
+          OnClick = imgBackGroundClick
+        end
+        object imgHelpLines: TImage
+          Left = 6
+          Top = 53
+          Width = 22
+          Height = 22
+          OnClick = imgHelpLinesClick
+        end
+        object imgRotCenter: TImage
+          Left = 6
+          Top = 77
+          Width = 22
+          Height = 22
+          OnClick = imgRotCenterClick
+        end
+        object stTextColorsThumbText: TStaticText
+          Left = 38
+          Top = 10
+          Width = 134
+          Height = 17
+          Caption = 'Textcolor in frame overview'
+          TabOrder = 0
+        end
+        object stTextColorsBackGround: TStaticText
+          Left = 38
+          Top = 34
+          Width = 128
+          Height = 17
+          Caption = 'Background color in editor'
+          TabOrder = 1
+        end
+        object stTextColorsHelpLines: TStaticText
+          Left = 38
+          Top = 58
+          Width = 84
+          Height = 17
+          Caption = 'Color of helplines'
+          TabOrder = 2
+        end
+        object stTextColorsRotCenter: TStaticText
+          Left = 38
+          Top = 82
+          Width = 188
+          Height = 17
+          Caption = 'Color of rotation center && rotation lines'
+          TabOrder = 3
+        end
+      end
+    end
+  end
+  object bnHelp: TBitBtn
+    Left = 357
+    Top = 142
+    Width = 89
+    Height = 25
+    Anchors = [akRight, akBottom]
+    Caption = 'Hilfe'
+    Enabled = False
+    TabOrder = 1
+    Kind = bkHelp
+  end
+  object bnUse: TBitBtn
+    Left = 357
+    Top = 70
+    Width = 89
+    Height = 25
+    Anchors = [akTop, akRight]
+    Caption = 'An&wenden'
+    TabOrder = 2
+    OnClick = bnUseClick
+  end
+  object bnCancel: TBitBtn
+    Left = 357
+    Top = 39
+    Width = 89
+    Height = 25
+    Anchors = [akTop, akRight]
+    TabOrder = 3
+    Kind = bkCancel
+  end
+  object bnOK: TBitBtn
+    Left = 357
+    Top = 8
+    Width = 89
+    Height = 25
+    Anchors = [akTop, akRight]
+    TabOrder = 4
+    Kind = bkOK
+  end
+  object cdPick: TColorDialog
+    Left = 312
+  end
+end

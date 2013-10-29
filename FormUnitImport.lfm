@@ -1,0 +1,138 @@
+object FormImport: TFormImport
+  Left = 297
+  Top = 187
+  BorderStyle = bsDialog
+  Caption = 'Import frame'
+  ClientHeight = 345
+  ClientWidth = 506
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  HelpFile = 'Heathcliff.hlp'
+  Position = poMainFormCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  object bnImport: TBitBtn
+    Left = 136
+    Top = 312
+    Width = 81
+    Height = 25
+    Anchors = [akRight, akBottom]
+    Caption = 'Import'
+    Default = True
+    Enabled = False
+    ModalResult = 1
+    TabOrder = 0
+  end
+  object bnCancel: TBitBtn
+    Left = 223
+    Top = 312
+    Width = 83
+    Height = 25
+    Anchors = [akRight, akBottom]
+    TabOrder = 1
+    Kind = bkCancel
+  end
+  object bnHelp: TBitBtn
+    Left = 47
+    Top = 312
+    Width = 83
+    Height = 25
+    Anchors = [akRight, akBottom]
+    TabOrder = 2
+    Kind = bkHelp
+  end
+  object labelFiletype: TStaticText
+    Left = 8
+    Top = 288
+    Width = 49
+    Height = 17
+    Caption = 'File&type:'
+    FocusControl = cbFiletype
+    TabOrder = 3
+  end
+  object cbFiletype: TComboBox
+    Left = 64
+    Top = 285
+    Width = 242
+    Height = 21
+    Style = csDropDownList
+    Anchors = [akLeft, akTop, akRight]
+    ItemHeight = 13
+    TabOrder = 4
+    OnChange = cbFiletypeChange
+    Items.Strings = (
+      'Yoghurt files (*.LC1)'
+      'All files (*.*)'
+    )
+  end
+  object labelFilename: TStaticText
+    Left = 8
+    Top = 261
+    Width = 55
+    Height = 17
+    Caption = '&Filename:'
+    FocusControl = editFilename
+    TabOrder = 5
+  end
+  object editFilename: TEdit
+    Left = 65
+    Top = 258
+    Width = 241
+    Height = 21
+    Anchors = [akLeft, akTop, akRight]
+    ReadOnly = True
+    TabOrder = 6
+    OnChange = editFilenameChange
+  end
+  object labelSearchIn: TStaticText
+    Left = 8
+    Top = 11
+    Width = 58
+    Height = 17
+    Caption = '&Search in:'
+    TabOrder = 7
+  end
+  object scbDrives: TShellComboBox
+    Left = 66
+    Top = 8
+    Width = 240
+    Height = 22
+    Root = 'rfDesktop'
+    ShellListView = slvFiles
+    UseShellImages = True
+    TabOrder = 8
+  end
+  object slvFiles: TShellListView
+    Left = 8
+    Top = 36
+    Width = 298
+    Height = 217
+    ObjectTypes = [otFolders, otNonFolders]
+    Root = 'rfDesktop'
+    ShellComboBox = scbDrives
+    Sorted = True
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    OnClick = slvFilesClick
+    ReadOnly = False
+    HideSelection = False
+    TabOrder = 9
+    ViewStyle = vsReport
+  end
+  object lb: TListBox
+    Left = 312
+    Top = 0
+    Width = 194
+    Height = 345
+    Style = lbOwnerDrawFixed
+    Align = alRight
+    Color = clBlack
+    ItemHeight = 68
+    TabOrder = 10
+    OnClick = lbClick
+    OnDrawItem = lbDrawItem
+  end
+end

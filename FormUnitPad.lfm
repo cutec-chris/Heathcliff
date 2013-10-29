@@ -1,0 +1,166 @@
+object FormSketchpad: TFormSketchpad
+  Left = 428
+  Top = 136
+  Hint = 'Alt-Click to add pointer after selected, Shift-Alt-Click to add as last. Ctrl-Click to delete point.'
+  BorderIcons = [biSystemMenu, biMinimize, biMaximize, biHelp]
+  Caption = 'new file'
+  ClientHeight = 562
+  ClientWidth = 643
+  Color = clBlack
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  HelpFile = 'Heathcliff.hlp'
+  KeyPreview = True
+  Position = poDefault
+  Visible = True
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnMouseWheelDown = FormMouseWheelDown
+  OnMouseWheelUp = FormMouseWheelUp
+  OnShow = FormShow
+  PixelsPerInch = 96
+  object panelDown: TPanel
+    Left = 0
+    Top = 544
+    Width = 643
+    Height = 18
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 1
+    object panelCorner: TPanel
+      Left = 623
+      Top = 0
+      Width = 18
+      Height = 18
+      Hint = 'Repaint image'
+      Align = alRight
+      BevelOuter = bvLowered
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      OnClick = panelCornerClick
+    end
+    object panelXsb: TPanel
+      Left = 56
+      Top = 0
+      Width = 567
+      Height = 18
+      Align = alClient
+      BevelOuter = bvLowered
+      TabOrder = 1
+      object sbX: TScrollBar
+        Left = 0
+        Top = 0
+        Width = 565
+        Height = 16
+        Align = alBottom
+        LargeChange = 64
+        Max = 0
+        PageSize = 0
+        SmallChange = 8
+        TabOrder = 0
+        TabStop = False
+        OnChange = sbXChange
+      end
+    end
+    object panelFrameSwitcher: TPanel
+      Left = 0
+      Top = 0
+      Width = 58
+      Height = 18
+      Align = alLeft
+      Alignment = taRightJustify
+      BevelOuter = bvLowered
+      BorderWidth = 2
+      Caption = '0'
+      TabOrder = 2
+      object sbFrames: TScrollBar
+        Left = 1
+        Top = 1
+        Width = 32
+        Height = 12
+        Align = alLeft
+        Max = 0
+        PageSize = 0
+        TabOrder = 0
+        TabStop = False
+        OnChange = sbFramesChange
+      end
+    end
+  end
+  object panelYsb: TPanel
+    Left = 625
+    Top = 0
+    Width = 18
+    Height = 544
+    Align = alRight
+    BevelOuter = bvLowered
+    TabOrder = 2
+    object sbY: TScrollBar
+      Left = 0
+      Top = 0
+      Width = 16
+      Height = 542
+      Align = alClient
+      Kind = sbVertical
+      LargeChange = 64
+      Max = 0
+      PageSize = 0
+      SmallChange = 8
+      TabOrder = 0
+      TabStop = False
+      OnChange = sbYChange
+    end
+  end
+  object panel4pad: TPanel
+    Left = 0
+    Top = 0
+    Width = 625
+    Height = 544
+    Align = alClient
+    BevelOuter = bvLowered
+    TabOrder = 0
+    object pad: TPaintBox
+      Tag = -1
+      Left = 31
+      Top = 19
+      Width = 591
+      Height = 522
+      Cursor = crHandPoint
+      Align = alClient
+      Color = clBlack
+      ParentColor = False
+      OnMouseDown = padMouseDown
+      OnMouseMove = padMouseMove
+      OnMouseUp = padMouseUp
+      OnPaint = padPaint
+    end
+    object iTopRuler: TImage
+      Left = 0
+      Top = 0
+      Width = 623
+      Height = 20
+      Align = alTop
+      OnDblClick = iTopRulerDblClick
+      OnMouseDown = iTopRulerMouseDown
+      OnMouseMove = iTopRulerMouseMove
+      OnMouseUp = iTopRulerMouseUp
+    end
+    object iLeftRuler: TImage
+      Left = 0
+      Top = 19
+      Width = 32
+      Height = 522
+      Align = alLeft
+      OnDblClick = iLeftRulerDblClick
+      OnMouseDown = iLeftRulerMouseDown
+      OnMouseMove = iLeftRulerMouseMove
+      OnMouseUp = iLeftRulerMouseUp
+    end
+  end
+end

@@ -1,0 +1,37 @@
+object FormPickImage: TFormPickImage
+  Left = 347
+  Top = 120
+  BorderIcons = [biSystemMenu, biMaximize]
+  BorderStyle = bsSizeToolWin
+  Caption = 'Pick part of image, then close window'
+  ClientHeight = 158
+  ClientWidth = 309
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Position = poMainFormCenter
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  object img: TImage
+    Left = 0
+    Top = 0
+    Width = 309
+    Height = 139
+    Align = alClient
+    AutoSize = True
+    OnMouseDown = imgMouseDown
+  end
+  object sbar: TStatusBar
+    Left = 0
+    Top = 139
+    Width = 309
+    Height = 19
+    Panels = <>
+    SimplePanel = True
+    SimpleText = 'Mark upper left corner with left mouse-button and lower right corner with right mouse-button.'
+  end
+end

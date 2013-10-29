@@ -1,0 +1,284 @@
+* Konvertiere Datei /media/Daten/Source/Heathcliff/Heathcliff.dpr *
+Kodierung von ISO-8859-1 zu UTF-8 geändert
+Added defines -dBorland -dVer150 -dDelphi7 -dCompiler6_Up -dPUREPASCAL in custom options
+Found all unit files
+* Berichtigung der verwendeten Units für Datei /media/Daten/Source/Heathcliff/Heathcliff.dpr *
+
+*** Converting unit files belonging to project/package ***
+* Konvertiere Datei /media/Daten/Source/Heathcliff/FormUnitStatus.pas *
+Kodierung von ISO-8859-1 zu UTF-8 geändert
+Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+* Konvertiere Datei /media/Daten/Source/Heathcliff/FormUnitColors.pas *
+Kodierung von ISO-8859-1 zu UTF-8 geändert
+Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+* Konvertiere Datei /media/Daten/Source/Heathcliff/FormUnitDebug.pas *
+Kodierung von ISO-8859-1 zu UTF-8 geändert
+Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+* Konvertiere Datei /media/Daten/Source/Heathcliff/FormUnitDelays.pas *
+Kodierung von ISO-8859-1 zu UTF-8 geändert
+Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+* Konvertiere Datei /media/Daten/Source/Heathcliff/FormUnitHelpLines.pas *
+Kodierung von ISO-8859-1 zu UTF-8 geändert
+Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+* Konvertiere Datei /media/Daten/Source/Heathcliff/FormUnitImport.pas *
+Kodierung von ISO-8859-1 zu UTF-8 geändert
+Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+Replaced call FileExists(editFilename.Text) with FileExistsUTF8(editFilename.Text) { *Converted from FileExists* }
+Added unit FileUtil to uses section
+* Konvertiere Datei /media/Daten/Source/Heathcliff/FormUnitLicense.pas *
+Kodierung von ISO-8859-1 zu UTF-8 geändert
+Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+* Konvertiere Datei /media/Daten/Source/Heathcliff/FormUnitMain.pas *
+Kodierung von ISO-8859-1 zu UTF-8 geändert
+Zeichenschreibweise von Unit "FormUnitHelplines" auf "FormUnitHelpLines" korrigiert.
+Unit "MMSystem" im uses Abschnitt entfernt.
+Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+Replaced call FileExists(Yoghurt.Filename+'.WAV') with FileExistsUTF8(Yoghurt.Filename+'.WAV') { *Converted from FileExists* }
+Added unit FileUtil to uses section
+Replaced call FileExists(Yoghurt.Filename+'.WAV') with FileExistsUTF8(Yoghurt.Filename+'.WAV') { *Converted from FileExists* }
+Replaced call FileExists(odBitmap.Filename) with FileExistsUTF8(odBitmap.Filename) { *Converted from FileExists* }
+Replaced call DeleteFile(s); with DeleteFileUTF8(s); { *Converted from DeleteFile* }
+Replaced call FileExists(s) with FileExistsUTF8(s) { *Converted from FileExists* }
+Replaced call fileExists(odLC1.Filename) with FileExistsUTF8(odLC1.Filename) { *Converted from FileExists* }
+Replaced call FileExists(Yoghurt.Filename) with FileExistsUTF8(Yoghurt.Filename) { *Converted from FileExists* }
+Replaced call FileExists(fn+'.wav') with FileExistsUTF8(fn+'.wav') { *Converted from FileExists* }
+Replaced call FileExists(fFrame.ImgName) with FileExistsUTF8(fFrame.ImgName) { *Converted from FileExists* }
+Replaced call FileExists(s) with FileExistsUTF8(s) { *Converted from FileExists* }
+Replaced call FileExists(s) with FileExistsUTF8(s) { *Converted from FileExists* }
+Replaced call FileExists(s) with FileExistsUTF8(s) { *Converted from FileExists* }
+Replaced call FileExists(s) with FileExistsUTF8(s) { *Converted from FileExists* }
+Replaced call FileExists(s) with FileExistsUTF8(s) { *Converted from FileExists* }
+Replaced call FileExists(fFrame.ImgName) with FileExistsUTF8(fFrame.ImgName) { *Converted from FileExists* }
+Replaced call FileExists(Filename) with FileExistsUTF8(Filename) { *Converted from FileExists* }
+* Konvertiere Datei /media/Daten/Source/Heathcliff/FormUnitPad.pas *
+Kodierung von ISO-8859-1 zu UTF-8 geändert
+Zeichenschreibweise von Unit "FormUnitHelplines" auf "FormUnitHelpLines" korrigiert.
+Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+Replaced call FileExists(TLaserFrame(FormMain.Yoghurt.Frames[sbFrames.Position]).ImgName); with FileExistsUTF8(TLaserFrame(FormMain.Yoghurt.Frames[sbFrames.Position]).ImgName); { *Converted from FileExists* }
+Added unit FileUtil to uses section
+Replaced call FileExists(ParamStr(1)) with FileExistsUTF8(ParamStr(1)) { *Converted from FileExists* }
+* Konvertiere Datei /media/Daten/Source/Heathcliff/FormUnitPick.pas *
+Kodierung von ISO-8859-1 zu UTF-8 geändert
+Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+* Konvertiere Datei /media/Daten/Source/Heathcliff/FormUnitPreview.pas *
+Kodierung von ISO-8859-1 zu UTF-8 geändert
+Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+* Konvertiere Datei /media/Daten/Source/Heathcliff/UnitHeathcliffHelpers.pas *
+
+*** Repariere Formulardateien ... ***
+* Repariere Form-Datei /media/Daten/Source/Heathcliff/FormUnitStatus.lfm *
+Removed property "TextHeight".
+Removed property "OldCreateOrder".
+* Berichtigung der verwendeten Units für Datei /media/Daten/Source/Heathcliff/FormUnitStatus.pas *
+* Repariere Form-Datei /media/Daten/Source/Heathcliff/FormUnitColors.lfm *
+Removed property "Options".
+Removed property "ExplicitWidth".
+Removed property "ExplicitTop".
+Removed property "ExplicitLeft".
+Removed property "AlignWithMargins".
+Removed property "ExplicitHeight".
+Removed property "ExplicitWidth".
+Removed property "ExplicitWidth".
+Removed property "ExplicitTop".
+Removed property "ExplicitLeft".
+Removed property "AlignWithMargins".
+Removed property "ExplicitHeight".
+Removed property "ExplicitWidth".
+Removed property "ExplicitWidth".
+Removed property "AlignWithMargins".
+Removed property "ExplicitHeight".
+Removed property "ExplicitWidth".
+Removed property "AlignWithMargins".
+Removed property "TextHeight".
+Removed property "DesignSize".
+Removed property "OldCreateOrder".
+Changed Top coord of TStaticText from "96" to "82" inside TGroupBox.
+Changed Left coord of TStaticText from "40" to "38" inside TGroupBox.
+Changed Top coord of TStaticText from "72" to "58" inside TGroupBox.
+Changed Left coord of TStaticText from "40" to "38" inside TGroupBox.
+Changed Top coord of TStaticText from "48" to "34" inside TGroupBox.
+Changed Left coord of TStaticText from "40" to "38" inside TGroupBox.
+Changed Top coord of TStaticText from "24" to "10" inside TGroupBox.
+Changed Left coord of TStaticText from "40" to "38" inside TGroupBox.
+Changed Top coord of TImage from "91" to "77" inside TGroupBox.
+Changed Left coord of TImage from "8" to "6" inside TGroupBox.
+Changed Top coord of TImage from "67" to "53" inside TGroupBox.
+Changed Left coord of TImage from "8" to "6" inside TGroupBox.
+Changed Top coord of TImage from "43" to "29" inside TGroupBox.
+Changed Left coord of TImage from "8" to "6" inside TGroupBox.
+Changed Top coord of TImage from "19" to "5" inside TGroupBox.
+Changed Left coord of TImage from "8" to "6" inside TGroupBox.
+Changed Top coord of TStaticText from "96" to "82" inside TGroupBox.
+Changed Left coord of TStaticText from "40" to "38" inside TGroupBox.
+Changed Top coord of TStaticText from "72" to "58" inside TGroupBox.
+Changed Left coord of TStaticText from "40" to "38" inside TGroupBox.
+Changed Top coord of TStaticText from "48" to "34" inside TGroupBox.
+Changed Left coord of TStaticText from "40" to "38" inside TGroupBox.
+Changed Top coord of TStaticText from "24" to "10" inside TGroupBox.
+Changed Left coord of TStaticText from "40" to "38" inside TGroupBox.
+Changed Top coord of TImage from "91" to "77" inside TGroupBox.
+Changed Left coord of TImage from "8" to "6" inside TGroupBox.
+Changed Top coord of TImage from "67" to "53" inside TGroupBox.
+Changed Left coord of TImage from "8" to "6" inside TGroupBox.
+Changed Top coord of TImage from "43" to "29" inside TGroupBox.
+Changed Left coord of TImage from "8" to "6" inside TGroupBox.
+Changed Top coord of TImage from "19" to "5" inside TGroupBox.
+Changed Left coord of TImage from "8" to "6" inside TGroupBox.
+Changed Top coord of TStaticText from "80" to "66" inside TGroupBox.
+Changed Left coord of TStaticText from "258" to "256" inside TGroupBox.
+Changed Top coord of TStaticText from "14" to "0" inside TGroupBox.
+Changed Left coord of TStaticText from "64" to "62" inside TGroupBox.
+Changed Top coord of TStaticText from "14" to "0" inside TGroupBox.
+Changed Left coord of TStaticText from "232" to "230" inside TGroupBox.
+Changed Top coord of TStaticText from "80" to "66" inside TGroupBox.
+Changed Left coord of TStaticText from "208" to "206" inside TGroupBox.
+Changed Top coord of TEdit from "56" to "42" inside TGroupBox.
+Changed Left coord of TEdit from "64" to "62" inside TGroupBox.
+Changed Top coord of TEdit from "32" to "18" inside TGroupBox.
+Changed Left coord of TEdit from "64" to "62" inside TGroupBox.
+Changed Top coord of TStaticText from "60" to "46" inside TGroupBox.
+Changed Left coord of TStaticText from "16" to "14" inside TGroupBox.
+Changed Top coord of TStaticText from "36" to "22" inside TGroupBox.
+Changed Left coord of TStaticText from "16" to "14" inside TGroupBox.
+Changed Top coord of TStaticText from "14" to "0" inside TGroupBox.
+Changed Left coord of TStaticText from "184" to "182" inside TGroupBox.
+Changed Top coord of TStaticText from "14" to "0" inside TGroupBox.
+Changed Left coord of TStaticText from "280" to "278" inside TGroupBox.
+Changed Top coord of TImage from "56" to "42" inside TGroupBox.
+Changed Left coord of TImage from "288" to "286" inside TGroupBox.
+Changed Top coord of TImage from "32" to "18" inside TGroupBox.
+Changed Left coord of TImage from "288" to "286" inside TGroupBox.
+Changed Top coord of TImage from "32" to "18" inside TGroupBox.
+Changed Left coord of TImage from "264" to "262" inside TGroupBox.
+Changed Top coord of TImage from "56" to "42" inside TGroupBox.
+Changed Left coord of TImage from "264" to "262" inside TGroupBox.
+Changed Top coord of TImage from "56" to "42" inside TGroupBox.
+Changed Left coord of TImage from "240" to "238" inside TGroupBox.
+Changed Top coord of TImage from "56" to "42" inside TGroupBox.
+Changed Left coord of TImage from "216" to "214" inside TGroupBox.
+Changed Top coord of TImage from "56" to "42" inside TGroupBox.
+Changed Left coord of TImage from "192" to "190" inside TGroupBox.
+Changed Top coord of TImage from "32" to "18" inside TGroupBox.
+Changed Left coord of TImage from "216" to "214" inside TGroupBox.
+Changed Top coord of TImage from "32" to "18" inside TGroupBox.
+Changed Left coord of TImage from "192" to "190" inside TGroupBox.
+Changed Top coord of TImage from "32" to "18" inside TGroupBox.
+Changed Left coord of TImage from "240" to "238" inside TGroupBox.
+* Berichtigung der verwendeten Units für Datei /media/Daten/Source/Heathcliff/FormUnitColors.pas *
+* Repariere Form-Datei /media/Daten/Source/Heathcliff/FormUnitDebug.lfm *
+Removed property "TextHeight".
+Removed property "OldCreateOrder".
+* Berichtigung der verwendeten Units für Datei /media/Daten/Source/Heathcliff/FormUnitDebug.pas *
+* Repariere Form-Datei /media/Daten/Source/Heathcliff/FormUnitDelays.lfm *
+Removed property "TextHeight".
+Removed property "DesignSize".
+Removed property "OldCreateOrder".
+Changed Top coord of TEdit from "99" to "85" inside TGroupBox.
+Changed Left coord of TEdit from "82" to "80" inside TGroupBox.
+Changed Top coord of TEdit from "72" to "58" inside TGroupBox.
+Changed Left coord of TEdit from "82" to "80" inside TGroupBox.
+Changed Top coord of TEdit from "45" to "31" inside TGroupBox.
+Changed Left coord of TEdit from "82" to "80" inside TGroupBox.
+Changed Top coord of TEdit from "18" to "4" inside TGroupBox.
+Changed Left coord of TEdit from "82" to "80" inside TGroupBox.
+Changed Top coord of TStaticText from "102" to "88" inside TGroupBox.
+Changed Left coord of TStaticText from "16" to "14" inside TGroupBox.
+Changed Top coord of TStaticText from "75" to "61" inside TGroupBox.
+Changed Left coord of TStaticText from "16" to "14" inside TGroupBox.
+Changed Top coord of TStaticText from "48" to "34" inside TGroupBox.
+Changed Left coord of TStaticText from "16" to "14" inside TGroupBox.
+Changed Top coord of TStaticText from "21" to "7" inside TGroupBox.
+Changed Left coord of TStaticText from "16" to "14" inside TGroupBox.
+* Berichtigung der verwendeten Units für Datei /media/Daten/Source/Heathcliff/FormUnitDelays.pas *
+* Repariere Form-Datei /media/Daten/Source/Heathcliff/FormUnitHelpLines.lfm *
+Removed property "DesignSize".
+Removed property "ExplicitHeight".
+Removed property "ExplicitWidth".
+Removed property "ExplicitTop".
+Removed property "ExplicitLeft".
+Removed property "DesignSize".
+Removed property "ExplicitHeight".
+Removed property "ExplicitWidth".
+Removed property "ExplicitTop".
+Removed property "ExplicitLeft".
+Removed property "DesignSize".
+Removed property "ExplicitHeight".
+Removed property "ExplicitWidth".
+Removed property "ExplicitTop".
+Removed property "ExplicitLeft".
+Removed property "TextHeight".
+Removed property "DesignSize".
+Removed property "OldCreateOrder".
+* Berichtigung der verwendeten Units für Datei /media/Daten/Source/Heathcliff/FormUnitHelpLines.pas *
+* Repariere Form-Datei /media/Daten/Source/Heathcliff/FormUnitImport.lfm *
+Removed property "TextHeight".
+Removed property "DesignSize".
+Removed property "OldCreateOrder".
+* Berichtigung der verwendeten Units für Datei /media/Daten/Source/Heathcliff/FormUnitImport.pas *
+* Repariere Form-Datei /media/Daten/Source/Heathcliff/FormUnitLicense.lfm *
+Removed property "Margins.Bottom".
+Removed property "Margins.Right".
+Removed property "Margins.Top".
+Removed property "Margins.Left".
+Removed property "AlignWithMargins".
+Removed property "TextHeight".
+Removed property "DesignSize".
+Removed property "OldCreateOrder".
+* Berichtigung der verwendeten Units für Datei /media/Daten/Source/Heathcliff/FormUnitLicense.pas *
+* Repariere Form-Datei /media/Daten/Source/Heathcliff/FormUnitMain.lfm *
+Removed property "TextHeight".
+Removed property "OldCreateOrder".
+Removed property "Icon.Data".
+Changed Top coord of TTBDock from "508" to "506" inside TPanel.
+Changed Left coord of TTBDock from "0" to "0" inside TPanel.
+Changed Top coord of TStatusBar from "517" to "515" inside TPanel.
+Changed Left coord of TStatusBar from "0" to "0" inside TPanel.
+Changed Top coord of TListBox from "80" to "78" inside TPanel.
+Changed Left coord of TListBox from "0" to "0" inside TPanel.
+Changed Top coord of TDock97 from "0" to "0" inside TPanel.
+Changed Left coord of TDock97 from "0" to "0" inside TPanel.
+Added property "SimplePanel = False" for TStatusBar.
+* Berichtigung der verwendeten Units für Datei /media/Daten/Source/Heathcliff/FormUnitMain.pas *
+* Repariere Form-Datei /media/Daten/Source/Heathcliff/FormUnitPad.lfm *
+Removed property "TextHeight".
+Removed property "OldCreateOrder".
+Removed property "Icon.Data".
+Removed property "VertScrollBar.ButtonSize".
+Removed property "HorzScrollBar.ButtonSize".
+Changed Top coord of TImage from "21" to "19" inside TPanel.
+Changed Left coord of TImage from "1" to "0" inside TPanel.
+Changed Top coord of TImage from "1" to "0" inside TPanel.
+Changed Left coord of TImage from "1" to "0" inside TPanel.
+Changed Top coord of TPaintBox from "21" to "19" inside TPanel.
+Changed Left coord of TPaintBox from "33" to "31" inside TPanel.
+Changed Top coord of TScrollBar from "1" to "0" inside TPanel.
+Changed Left coord of TScrollBar from "1" to "0" inside TPanel.
+Changed Top coord of TScrollBar from "3" to "1" inside TPanel.
+Changed Left coord of TScrollBar from "3" to "1" inside TPanel.
+Changed Top coord of TPanel from "0" to "0" inside TPanel.
+Changed Left coord of TPanel from "0" to "0" inside TPanel.
+Changed Top coord of TScrollBar from "1" to "0" inside TPanel.
+Changed Left coord of TScrollBar from "1" to "0" inside TPanel.
+Changed Top coord of TPanel from "0" to "0" inside TPanel.
+Changed Left coord of TPanel from "58" to "56" inside TPanel.
+Changed Top coord of TPanel from "0" to "0" inside TPanel.
+Changed Left coord of TPanel from "625" to "623" inside TPanel.
+* Berichtigung der verwendeten Units für Datei /media/Daten/Source/Heathcliff/FormUnitPad.pas *
+* Repariere Form-Datei /media/Daten/Source/Heathcliff/FormUnitPick.lfm *
+Removed property "ExplicitHeight".
+Removed property "TextHeight".
+Removed property "OldCreateOrder".
+Removed property "Icon.Data".
+* Berichtigung der verwendeten Units für Datei /media/Daten/Source/Heathcliff/FormUnitPick.pas *
+* Repariere Form-Datei /media/Daten/Source/Heathcliff/FormUnitPreview.lfm *
+Removed property "ParentCtl3D".
+Removed property "Ctl3D".
+Removed property "DrawingStyle".
+Removed property "ExplicitHeight".
+Removed property "ExplicitTop".
+Removed property "TextHeight".
+Removed property "OldCreateOrder".
+* Berichtigung der verwendeten Units für Datei /media/Daten/Source/Heathcliff/FormUnitPreview.pas *
+* Berichtigung der verwendeten Units für Datei /media/Daten/Source/Heathcliff/UnitHeathcliffHelpers.pas *
+Konvertierung benötigte: 00:00:24
+Conversion Ready.

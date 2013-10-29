@@ -1,0 +1,87 @@
+object FormDebug: TFormDebug
+  Left = 0
+  Top = 294
+  AutoSize = True
+  Caption = 'Demowave'
+  ClientHeight = 505
+  ClientWidth = 1116
+  Color = clBtnFace
+  Constraints.MaxHeight = 539
+  Constraints.MinHeight = 539
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Position = poScreenCenter
+  WindowState = wsMaximized
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  object img: TImage
+    Left = 0
+    Top = 0
+    Width = 1116
+    Height = 512
+    PopupMenu = pmZoom
+  end
+  object pmZoom: TPopupMenu
+    Left = 544
+    Top = 240
+    object N1xZoom1: TMenuItem
+      Caption = '1x Zoom'
+      OnClick = N1xZoom1Click
+    end
+    object N2xZoom1: TMenuItem
+      Caption = '2x Zoom'
+      OnClick = N2xZoom1Click
+    end
+    object N4xZoom1: TMenuItem
+      Caption = '4x Zoom'
+      OnClick = N4xZoom1Click
+    end
+    object N8xZoom1: TMenuItem
+      Caption = '8x Zoom'
+      OnClick = N8xZoom1Click
+    end
+    object N16xZoom1: TMenuItem
+      Caption = '16x Zoom'
+      OnClick = N16xZoom1Click
+    end
+    object N32xZoom1: TMenuItem
+      Caption = '32x Zoom'
+      OnClick = N32xZoom1Click
+    end
+    object N64xZoom1: TMenuItem
+      Caption = '64x Zoom'
+      OnClick = N64xZoom1Click
+    end
+    object Step11: TMenuItem
+      Caption = 'Step 1'
+      OnClick = Step11Click
+    end
+    object Step21: TMenuItem
+      Caption = 'Step 2'
+      OnClick = Step21Click
+    end
+    object Step41: TMenuItem
+      Caption = 'Step 4'
+      OnClick = Step41Click
+    end
+    object Step81: TMenuItem
+      Caption = 'Step 8'
+      OnClick = Step81Click
+    end
+    object Step161: TMenuItem
+      Caption = 'Step 16'
+      OnClick = Step161Click
+    end
+    object Step321: TMenuItem
+      Caption = 'Step 32'
+      OnClick = Step321Click
+    end
+    object Step641: TMenuItem
+      Caption = 'Step 64'
+      OnClick = Step641Click
+    end
+  end
+end
