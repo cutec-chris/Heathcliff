@@ -385,8 +385,6 @@ type
     toolbarPointsFrames: TToolBar;
     ToolbarSep971: TToolButton;
     ToolbarSep973: TToolButton;
-    ToolbarSep974: TToolButton;
-    ToolbarSep975: TToolButton;
     ToolbarSep976: TToolButton;
     ToolbarSep977: TToolButton;
     ToolbarSep978: TToolButton;
