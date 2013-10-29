@@ -36,7 +36,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="13">
+    <Units Count="12">
       <Unit0>
         <Filename Value="Heathcliff.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -127,11 +127,6 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitPreview"/>
       </Unit11>
-      <Unit12>
-        <Filename Value="UnitHeathcliffHelpers.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="UnitHeathcliffHelpers"/>
-      </Unit12>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -157,7 +152,7 @@
     </Other>
   </CompilerOptions>
   <Debugging>
-    <Exceptions Count="3">
+    <Exceptions Count="4">
       <Item1>
         <Name Value="EAbort"/>
       </Item1>
@@ -167,6 +162,9 @@
       <Item3>
         <Name Value="EFOpenError"/>
       </Item3>
+      <Item4>
+        <Name Value="ERegistryException"/>
+      </Item4>
     </Exceptions>
   </Debugging>
 </CONFIG>

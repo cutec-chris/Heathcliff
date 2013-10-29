@@ -1667,7 +1667,11 @@ begin
    EquilateralSides := 6;
    EquilateralCenter.x := 128; EquilateralCenter.y := 128;
    EquilateralFinished := true;
+   {$IFNDEF WINDOWS}
+   reg := TRegIniFile.Create('settings.ini');
+   {$else}
    reg := TRegistry.Create;
+   {$endif}
    reg.RootKey := HKEY_CURRENT_USER;
    try
       if reg.OpenKey('\SOFTWARE\PepiMK Software\Heathcliff', true) then begin
@@ -1827,17 +1831,17 @@ begin
    finally
       FreeAndNil(reg);
    end;
-   Screen.Cursors[crMovePoint] := LoadCursor(hInstance,'MOVEPOINT');
-   Screen.Cursors[crAddPoint] := LoadCursor(hInstance,'ADDPOINT');
-   Screen.Cursors[crDelPoint] := LoadCursor(hInstance,'DELPOINT');
-   Screen.Cursors[crZoom] := LoadCursor(hInstance,'ZOOM');
-   Screen.Cursors[crPointType] := LoadCursor(hInstance,'POINTTYPE'); //Screen.Cursors[crCross];
-   Screen.Cursors[crAnimFrame] := LoadCursor(hInstance,'ANIM'); //Screen.Cursors[crCross];
-   Screen.Cursors[crMoveRotFrame] := Screen.Cursors[crSize]; //LoadCursor(hInstance,'ANIM'); //Screen.Cursors[crCross];
-   Screen.Cursors[crSetPoints] := Screen.Cursors[crCross]; //LoadCursor(hInstance,'ANIM'); //Screen.Cursors[crCross];
-   MyIcons[0] := LoadIcon(hInstance,'FULLICON');
-   Application.Icon.Handle := MyIcons[0];
-   FormMain.Icon.Handle := MyIcons[0];
+   //Screen.Cursors[crMovePoint] := LoadCursor(hInstance,'MOVEPOINT');
+   //Screen.Cursors[crAddPoint] := LoadCursor(hInstance,'ADDPOINT');
+   //Screen.Cursors[crDelPoint] := LoadCursor(hInstance,'DELPOINT');
+   //Screen.Cursors[crZoom] := LoadCursor(hInstance,'ZOOM');
+   //Screen.Cursors[crPointType] := LoadCursor(hInstance,'POINTTYPE'); //Screen.Cursors[crCross];
+   //Screen.Cursors[crAnimFrame] := LoadCursor(hInstance,'ANIM'); //Screen.Cursors[crCross];
+   //Screen.Cursors[crMoveRotFrame] := Screen.Cursors[crSize]; //LoadCursor(hInstance,'ANIM'); //Screen.Cursors[crCross];
+   //Screen.Cursors[crSetPoints] := Screen.Cursors[crCross]; //LoadCursor(hInstance,'ANIM'); //Screen.Cursors[crCross];
+   //MyIcons[0] := LoadIcon(hInstance,'FULLICON');
+   //Application.Icon.Handle := MyIcons[0];
+   //FormMain.Icon.Handle := MyIcons[0];
 end;
 
 procedure TFormMain.LoadFromFile(fn: string; var y: TLaserFrames; realload: boolean);

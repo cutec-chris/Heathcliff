@@ -96,25 +96,18 @@ object FormImport: TFormImport
     Caption = '&Search in:'
     TabOrder = 7
   end
-  object scbDrives: TShellComboBox
+  object scbDrives: TComboBox
     Left = 66
     Top = 8
     Width = 240
     Height = 22
-    Root = 'rfDesktop'
-    ShellListView = slvFiles
-    UseShellImages = True
     TabOrder = 8
   end
-  object slvFiles: TShellListView
+  object slvFiles: TListView
     Left = 8
     Top = 36
     Width = 298
     Height = 217
-    ObjectTypes = [otFolders, otNonFolders]
-    Root = 'rfDesktop'
-    ShellComboBox = scbDrives
-    Sorted = True
     Anchors = [akLeft, akTop, akRight, akBottom]
     OnClick = slvFilesClick
     ReadOnly = False

@@ -1809,7 +1809,6 @@ object FormMain: TFormMain
       end
       object miShowBackframe: TMenuItem
         Caption = 'Show &backframe'
-        Checked = True
         GroupIndex = 1
         HelpContext = 5
         RadioItem = True
@@ -1818,7 +1817,6 @@ object FormMain: TFormMain
       end
       object miShowLinks: TMenuItem
         Caption = 'Show &links'
-        Checked = True
         GroupIndex = 1
         HelpContext = 5
         RadioItem = True
@@ -1833,7 +1831,6 @@ object FormMain: TFormMain
       end
       object miUseGrid: TMenuItem
         Caption = 'Show &grid'
-        Checked = True
         GroupIndex = 1
         HelpContext = 5
         RadioItem = True
@@ -1842,7 +1839,6 @@ object FormMain: TFormMain
       end
       object miSnapGrid: TMenuItem
         Caption = 'Snap to grid'
-        Checked = True
         GroupIndex = 1
         HelpContext = 5
         RadioItem = True
@@ -1871,7 +1867,6 @@ object FormMain: TFormMain
       end
       object miCloseloop: TMenuItem
         Caption = '&Close loop'
-        Checked = True
         GroupIndex = 1
         HelpContext = 5
         RadioItem = True
