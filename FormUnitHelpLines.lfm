@@ -1,235 +1,250 @@
 object FormHelpLines: TFormHelpLines
-  Left = 289
-  Top = 103
+  Left = 387
+  Height = 254
+  Top = 225
+  Width = 353
   Caption = 'Helplines'
   ClientHeight = 254
   ClientWidth = 353
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
-  Font.Style = []
   HelpFile = 'Heathcliff.hlp'
   Position = poMainFormCenter
-  PixelsPerInch = 96
+  LCLVersion = '1.3'
   object bnOK: TBitBtn
     Left = 256
+    Height = 30
     Top = 8
     Width = 89
-    Height = 25
     Anchors = [akTop, akRight]
-    TabOrder = 0
     Kind = bkOK
+    TabOrder = 0
   end
   object bnCancel: TBitBtn
     Left = 256
+    Height = 30
     Top = 39
     Width = 89
-    Height = 25
     Anchors = [akTop, akRight]
-    TabOrder = 1
     Kind = bkCancel
+    TabOrder = 1
   end
   object bnUse: TBitBtn
     Left = 256
+    Height = 30
     Top = 70
     Width = 89
-    Height = 25
     Anchors = [akTop, akRight]
     Caption = 'An&wenden'
-    TabOrder = 2
     OnClick = bnUseClick
+    TabOrder = 2
   end
   object bnHelp: TBitBtn
     Left = 256
-    Top = 221
+    Height = 30
+    Top = 216
     Width = 89
-    Height = 25
     Anchors = [akRight, akBottom]
-    TabOrder = 3
     Kind = bkHelp
+    TabOrder = 3
   end
   object pcHelplines: TPageControl
     Left = 8
+    Height = 238
     Top = 8
     Width = 242
-    Height = 238
-    ActivePage = tsD
-    Anchors = [akLeft, akTop, akRight, akBottom]
+    ActivePage = tsX
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabIndex = 0
     TabOrder = 4
     object tsX: TTabSheet
       Caption = 'Vertical'
+      ClientHeight = 202
+      ClientWidth = 234
       object lbX: TListBox
         Left = 3
+        Height = 176
         Top = 31
         Width = 228
-        Height = 176
         Columns = 4
-        ItemHeight = 13
+        ItemHeight = 0
+        OnClick = lbXClick
+        ScrollWidth = 226
         Sorted = True
         TabOrder = 3
-        OnClick = lbXClick
+        TopIndex = -1
       end
       object stLineAtX: TStaticText
         Left = 3
+        Height = 18
         Top = 6
-        Width = 45
-        Height = 17
+        Width = 46
+        AutoSize = True
         Caption = '&Line at:'
         FocusControl = editX
         TabOrder = 4
       end
       object editX: TEdit
         Left = 53
+        Height = 24
         Top = 3
         Width = 52
-        Height = 21
-        Anchors = [akLeft, akTop, akRight]
+        Anchors = [akTop, akLeft, akRight]
         TabOrder = 0
       end
       object bnAddX: TBitBtn
         Left = 111
+        Height = 22
         Top = 3
         Width = 49
-        Height = 22
         Anchors = [akTop, akRight]
         Caption = '&Add'
-        TabOrder = 1
         OnClick = bnAddXClick
+        TabOrder = 1
       end
       object bnDelX: TBitBtn
         Left = 166
+        Height = 22
         Top = 3
         Width = 65
-        Height = 22
         Anchors = [akTop, akRight]
         Caption = '&Remove'
-        TabOrder = 2
         OnClick = bnDelXClick
+        TabOrder = 2
       end
     end
     object tsY: TTabSheet
       Caption = 'Horizontal'
+      ClientHeight = 202
+      ClientWidth = 234
       ImageIndex = 1
       object stLineAtY: TStaticText
         Left = 3
+        Height = 18
         Top = 6
-        Width = 39
-        Height = 17
+        Width = 46
+        AutoSize = True
         Caption = 'Line at:'
         TabOrder = 4
       end
       object editY: TEdit
         Left = 48
+        Height = 24
         Top = 3
         Width = 57
-        Height = 21
-        Anchors = [akLeft, akTop, akRight]
+        Anchors = [akTop, akLeft, akRight]
         TabOrder = 0
       end
       object bnAddY: TBitBtn
         Left = 111
+        Height = 22
         Top = 3
         Width = 49
-        Height = 22
         Anchors = [akTop, akRight]
         Caption = '&Add'
-        TabOrder = 1
         OnClick = bnAddYClick
+        TabOrder = 1
       end
       object bnDelY: TBitBtn
         Left = 166
+        Height = 22
         Top = 3
         Width = 65
-        Height = 22
         Anchors = [akTop, akRight]
         Caption = '&Remove'
-        TabOrder = 2
         OnClick = bnDelYClick
+        TabOrder = 2
       end
       object lbY: TListBox
         Left = 3
+        Height = 176
         Top = 31
         Width = 228
-        Height = 176
-        Anchors = [akLeft, akTop, akRight, akBottom]
+        Anchors = [akTop, akLeft, akRight, akBottom]
         Columns = 4
-        ItemHeight = 13
+        ItemHeight = 0
+        OnClick = lbYClick
+        ScrollWidth = 226
         Sorted = True
         TabOrder = 3
-        OnClick = lbYClick
+        TopIndex = -1
       end
     end
     object tsD: TTabSheet
       Caption = '2 Points'
+      ClientHeight = 202
+      ClientWidth = 234
       ImageIndex = 2
       object st2PointY: TStaticText
         Left = 104
+        Height = 17
         Top = 8
         Width = 14
-        Height = 17
         Caption = 'Y:'
         TabOrder = 10
       end
       object st2PointX: TStaticText
         Left = 64
+        Height = 17
         Top = 8
         Width = 14
-        Height = 17
         Caption = 'X:'
         TabOrder = 9
       end
       object st2Point1st: TStaticText
         Left = 8
+        Height = 18
         Top = 24
-        Width = 23
-        Height = 17
+        Width = 27
+        AutoSize = True
         Caption = 'First'
         TabOrder = 7
       end
       object st2Point2nd: TStaticText
         Left = 8
+        Height = 18
         Top = 48
-        Width = 41
-        Height = 17
+        Width = 45
+        AutoSize = True
         Caption = 'Second'
         TabOrder = 8
       end
       object editX1: TEdit
         Left = 56
+        Height = 24
         Top = 24
         Width = 33
-        Height = 21
         TabOrder = 0
       end
       object editY1: TEdit
         Left = 96
+        Height = 24
         Top = 24
         Width = 33
-        Height = 21
         TabOrder = 1
       end
       object editY2: TEdit
         Left = 96
+        Height = 24
         Top = 48
         Width = 33
-        Height = 21
         TabOrder = 3
       end
       object editX2: TEdit
         Left = 56
+        Height = 24
         Top = 48
         Width = 33
-        Height = 21
         TabOrder = 2
       end
       object lv2P: TListView
         Left = 3
+        Height = 131
         Top = 76
         Width = 228
-        Height = 131
-        Anchors = [akLeft, akTop, akRight, akBottom]
+        Anchors = [akTop, akLeft, akRight, akBottom]
         Columns = <        
           item
             Caption = 'X1'
@@ -245,7 +260,7 @@ object FormHelpLines: TFormHelpLines
           end        
           item
             Caption = 'Y2'
-            Width = 41
+            Width = 87
           end>
         TabOrder = 6
         ViewStyle = vsReport
@@ -253,21 +268,21 @@ object FormHelpLines: TFormHelpLines
       end
       object bnAdd2P: TBitBtn
         Left = 144
+        Height = 22
         Top = 20
         Width = 65
-        Height = 22
         Caption = '&Add'
-        TabOrder = 4
         OnClick = bnAdd2PClick
+        TabOrder = 4
       end
       object bnDel2P: TBitBtn
         Left = 144
+        Height = 22
         Top = 48
         Width = 65
-        Height = 22
         Caption = '&Remove'
-        TabOrder = 5
         OnClick = bnDel2PClick
+        TabOrder = 5
       end
     end
   end

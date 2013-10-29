@@ -40,7 +40,7 @@ uses
    UnitHeathcliffHelpers;
 
 type
-   TFormLicense = class(THeathcliffForm)
+   TFormLicense = class(TForm)
       bnCancel: TBitBtn;
       bnOK: TBitBtn;
       mGPL: TMemo;
@@ -58,4 +58,4 @@ uses
 
 {$R *.lfm}
 
-end.
+end.

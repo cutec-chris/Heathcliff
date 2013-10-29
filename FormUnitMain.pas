@@ -140,7 +140,7 @@ type
       property Frames[FrameIndex: integer]: TLaserFrame read GetFrames;
    end;
 
-   TFormMain = class(THeathcliffForm)
+   TFormMain = class(TForm)
     aAddFrame: TAction;
     aCheckAllLinks: TAction;
     aCheckFrameLinks: TAction;
@@ -4643,4 +4643,4 @@ end;
 
 end.
 
-
+

@@ -40,7 +40,7 @@ uses
    UnitHeathcliffHelpers;
 
 type
-   TFormSketchpad = class(THeathcliffForm)
+   TFormSketchpad = class(TForm)
       iLeftRuler: TImage;
       iTopRuler: TImage;
       pad: TPaintBox;
@@ -742,4 +742,4 @@ begin
    FormMain.miHelpLinesClick(nil);
 end;
 
-end.
+end.

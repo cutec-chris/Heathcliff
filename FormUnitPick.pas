@@ -40,7 +40,7 @@ uses
    UnitHeathcliffHelpers;
 
 type
-   TFormPickImage = class(THeathcliffForm)
+   TFormPickImage = class(TForm)
       img: TImage;
       sbar: TStatusBar;
       procedure FormActivate(Sender: TObject);
@@ -98,4 +98,4 @@ begin
    Redraw;
 end;
 
-end.
+end.

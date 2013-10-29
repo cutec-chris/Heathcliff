@@ -40,7 +40,7 @@ uses
    UnitHeathcliffHelpers;
 
 type
-   TFormColors = class(THeathcliffForm)
+   TFormColors = class(TForm)
       bnCancel: TBitBtn;
       bnHelp: TBitBtn;
       bnOK: TBitBtn;
@@ -343,4 +343,4 @@ begin
    end;
 end;
 
-end.
+end.

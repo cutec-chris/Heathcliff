@@ -40,7 +40,7 @@ uses
    UnitHeathcliffHelpers;
 
 type
-   TFormStatus = class(THeathcliffForm)
+   TFormStatus = class(TForm)
       labelFrame: TLabel;
       pgFrame: TProgressBar;
       pgMorph: TProgressBar;
@@ -60,4 +60,4 @@ implementation
 
 {$R *.lfm}
 
-end.
+end.

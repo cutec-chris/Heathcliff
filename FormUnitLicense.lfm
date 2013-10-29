@@ -1,24 +1,24 @@
 object FormLicense: TFormLicense
-  Left = 289
-  Top = 103
+  Left = 437
+  Height = 300
+  Top = 282
+  Width = 601
   BorderStyle = bsToolWindow
   Caption = 'License'
   ClientHeight = 300
   ClientWidth = 601
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
-  Font.Style = []
   FormStyle = fsStayOnTop
   Position = poDesktopCenter
-  PixelsPerInch = 96
+  LCLVersion = '1.3'
   object bnOK: TBitBtn
     Left = 8
+    Height = 25
     Top = 267
     Width = 193
-    Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'I Agree'
     Default = True
@@ -27,26 +27,24 @@ object FormLicense: TFormLicense
   end
   object bnCancel: TBitBtn
     Left = 400
+    Height = 25
     Top = 267
     Width = 193
-    Height = 25
     Anchors = [akRight, akBottom]
     Caption = 'I dont agree'
     ModalResult = 2
     TabOrder = 1
   end
   object mGPL: TMemo
-    Left = 8
-    Top = 8
-    Width = 585
-    Height = 248
+    Left = 0
+    Height = 256
+    Top = 0
+    Width = 601
     Align = alTop
-    Anchors = [akLeft, akTop, akRight, akBottom]
-    Font.Charset = DEFAULT_CHARSET
+    Anchors = [akTop, akLeft, akRight, akBottom]
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'Courier New'
-    Font.Style = []
     Lines.Strings = (
       '                    GNU GENERAL PUBLIC LICENSE'
       '                       Version 3, 29 June 2007'

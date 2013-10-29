@@ -41,7 +41,7 @@ uses
    UnitHeathcliffHelpers;
 
 type
-   TFormImport = class(THeathcliffForm)
+   TFormImport = class(TForm)
       bnCancel: TBitBtn;
       bnHelp: TBitBtn;
       bnImport: TBitBtn;
@@ -156,4 +156,4 @@ begin
    bnImport.Enabled := (lb.ItemIndex>-1);
 end;
 
-end.
+end.

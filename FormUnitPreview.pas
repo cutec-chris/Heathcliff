@@ -40,7 +40,7 @@ uses
    UnitHeathcliffHelpers;
 
 type
-   TFormPreview = class(THeathcliffForm)
+   TFormPreview = class(TForm)
       aLoop: TAction;
       alPreview: TActionList;
       aPlay: TAction;
@@ -138,4 +138,4 @@ begin
    FreeAndNil(DataStream);
 end;
 
-end.
+end.

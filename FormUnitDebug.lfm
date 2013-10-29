@@ -1,32 +1,32 @@
 object FormDebug: TFormDebug
-  Left = 0
-  Top = 294
+  Left = 205
+  Height = 539
+  Top = 197
+  Width = 1116
   AutoSize = True
   Caption = 'Demowave'
-  ClientHeight = 505
+  ClientHeight = 539
   ClientWidth = 1116
   Color = clBtnFace
   Constraints.MaxHeight = 539
   Constraints.MinHeight = 539
-  Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
-  Font.Style = []
-  Position = poScreenCenter
-  WindowState = wsMaximized
   OnCreate = FormCreate
-  PixelsPerInch = 96
+  Position = poScreenCenter
+  LCLVersion = '1.3'
+  WindowState = wsMaximized
   object img: TImage
     Left = 0
+    Height = 512
     Top = 0
     Width = 1116
-    Height = 512
     PopupMenu = pmZoom
   end
   object pmZoom: TPopupMenu
-    Left = 544
-    Top = 240
+    left = 544
+    top = 240
     object N1xZoom1: TMenuItem
       Caption = '1x Zoom'
       OnClick = N1xZoom1Click

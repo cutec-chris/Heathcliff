@@ -40,7 +40,7 @@ uses
    UnitHeathcliffHelpers;
 
 type
-   TFormDebug = class(THeathcliffForm)
+   TFormDebug = class(TForm)
       img: TImage;
       N16xZoom1: TMenuItem;
       N1xZoom1: TMenuItem;
@@ -178,4 +178,4 @@ begin
    FormMain.aFramePreviewExecute(nil);
 end;
 
-end.
+end.

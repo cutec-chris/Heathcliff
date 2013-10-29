@@ -45,7 +45,7 @@ type
       d: array[0..1] of array of TPoint;
    end;
 
-   TFormHelpLines = class(THeathcliffForm)
+   TFormHelpLines = class(TForm)
       bnAdd2P: TBitBtn;
       bnAddX: TBitBtn;
       bnAddY: TBitBtn;
@@ -248,4 +248,4 @@ begin
    end;
 end;
 
-end.
+end.

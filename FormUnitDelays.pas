@@ -40,7 +40,7 @@ uses
    UnitHeathcliffHelpers;
 
 type
-   TFormDelays = class(THeathcliffForm)
+   TFormDelays = class(TForm)
       bnCancel: TBitBtn;
       bnHelp: TBitBtn;
       bnOK: TBitBtn;
@@ -97,4 +97,4 @@ begin
    end;
 end;
 
-end.
+end.
