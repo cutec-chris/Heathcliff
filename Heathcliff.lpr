@@ -33,8 +33,6 @@ uses
    FormUnitPreview in 'FormUnitPreview.pas' {FormPreview},
    UnitHeathcliffHelpers in 'UnitHeathcliffHelpers.pas';
 
-{$R *.res}
-
 begin
    Application.Initialize;
    Application.Title := 'Heathcliff for Catweazle LC1 - Yoghurt Mixer';

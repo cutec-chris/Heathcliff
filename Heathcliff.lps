@@ -11,7 +11,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit0>
@@ -22,13 +22,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitStatus"/>
-        <EditorIndex Value="15"/>
+        <EditorIndex Value="12"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="34" Y="4"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit1>
       <Unit2>
@@ -41,7 +40,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="25" Y="43"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="23"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit2>
       <Unit3>
@@ -55,7 +54,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="24" Y="43"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit3>
@@ -70,9 +69,8 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="25" Y="43"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit4>
       <Unit5>
@@ -86,7 +84,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="28" Y="48"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -100,7 +98,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="112"/>
         <CursorPos X="14" Y="129"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit6>
@@ -115,7 +113,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="26"/>
         <CursorPos X="26" Y="32"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -127,12 +125,14 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitMain"/>
-        <EditorIndex Value="9"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="10"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1817"/>
-        <CursorPos X="6" Y="1844"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="26"/>
+        <CursorPos X="24" Y="40"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit8>
       <Unit9>
@@ -142,11 +142,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitPad"/>
-        <EditorIndex Value="12"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="22"/>
-        <CursorPos X="6" Y="40"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="97"/>
+        <CursorPos X="45" Y="99"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -158,11 +158,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitPick"/>
-        <EditorIndex Value="13"/>
+        <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="28" Y="43"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -174,11 +174,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitPreview"/>
-        <EditorIndex Value="14"/>
+        <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
         <TopLine Value="19"/>
         <CursorPos X="26" Y="43"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -190,7 +190,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="15"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit12>
@@ -201,22 +201,19 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="8"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="55" Y="5"/>
-        <UsageCount Value="10"/>
+        <TopLine Value="5317"/>
+        <CursorPos X="98" Y="5328"/>
+        <UsageCount Value="11"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit13>
       <Unit14>
         <Filename Value="/usr/share/fpcsrc/2.6.2/packages/fcl-registry/src/registry.pp"/>
         <UnitName Value="registry"/>
-        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
         <TopLine Value="128"/>
         <CursorPos X="3" Y="130"/>
-        <UsageCount Value="10"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="11"/>
       </Unit14>
       <Unit15>
         <Filename Value="/usr/share/fpcsrc/2.6.2/packages/fcl-registry/src/regini.inc"/>
@@ -227,101 +224,128 @@
       </Unit15>
       <Unit16>
         <Filename Value="../../lazarus/lcl/include/icon.inc"/>
-        <EditorIndex Value="10"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="657"/>
+        <TopLine Value="654"/>
         <CursorPos X="33" Y="673"/>
-        <UsageCount Value="10"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="11"/>
       </Unit16>
       <Unit17>
         <Filename Value="FormUnitImport.lfm"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
         <TopLine Value="87"/>
         <CursorPos X="1" Y="111"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit17>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="18" HistoryIndex="17">
+    <JumpHistory Count="26" HistoryIndex="25">
       <Position1>
         <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="5" Column="79" TopLine="1"/>
+        <Caret Line="3" Column="68" TopLine="1"/>
       </Position1>
       <Position2>
         <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="3" Column="63" TopLine="1"/>
+        <Caret Line="90" Column="42" TopLine="62"/>
       </Position2>
       <Position3>
         <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="2" Column="59" TopLine="1"/>
+        <Caret Line="103" Column="42" TopLine="75"/>
       </Position3>
       <Position4>
         <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="4" Column="63" TopLine="1"/>
+        <Caret Line="214" Column="42" TopLine="186"/>
       </Position4>
       <Position5>
-        <Filename Value="FormUnitImport.pas"/>
-        <Caret Line="55" Column="18" TopLine="37"/>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="430" Column="40" TopLine="402"/>
       </Position5>
       <Position6>
-        <Filename Value="/usr/share/fpcsrc/2.6.2/packages/fcl-registry/src/registry.pp"/>
-        <Caret Line="70" Column="17" TopLine="38"/>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="437" Column="40" TopLine="409"/>
       </Position6>
       <Position7>
-        <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="1681" Column="31" TopLine="1663"/>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="443" Column="40" TopLine="415"/>
       </Position7>
       <Position8>
-        <Filename Value="/usr/share/fpcsrc/2.6.2/packages/fcl-registry/src/registry.pp"/>
-        <Caret Line="188" Column="33" TopLine="161"/>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="2" Column="61" TopLine="1"/>
       </Position8>
       <Position9>
-        <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="689" Column="1" TopLine="1667"/>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="90" Column="42" TopLine="62"/>
       </Position9>
       <Position10>
-        <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="1680" Column="1" TopLine="1668"/>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="103" Column="42" TopLine="75"/>
       </Position10>
       <Position11>
-        <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="688" Column="1" TopLine="670"/>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="214" Column="42" TopLine="186"/>
       </Position11>
       <Position12>
-        <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="689" Column="1" TopLine="670"/>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="430" Column="40" TopLine="402"/>
       </Position12>
       <Position13>
-        <Filename Value="../../lazarus/lcl/include/icon.inc"/>
-        <Caret Line="675" Column="1" TopLine="657"/>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="437" Column="40" TopLine="409"/>
       </Position13>
       <Position14>
-        <Filename Value="Heathcliff.lpr"/>
-        <Caret Line="1" Column="1" TopLine="1"/>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="443" Column="40" TopLine="415"/>
       </Position14>
       <Position15>
-        <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="1680" Column="1" TopLine="1664"/>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="20" Column="54" TopLine="1"/>
       </Position15>
       <Position16>
-        <Filename Value="../../lazarus/lcl/include/icon.inc"/>
-        <Caret Line="673" Column="33" TopLine="657"/>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="90" Column="42" TopLine="74"/>
       </Position16>
       <Position17>
-        <Filename Value="FormUnitImport.lfm"/>
-        <Caret Line="1" Column="1" TopLine="1"/>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="103" Column="42" TopLine="75"/>
       </Position17>
       <Position18>
-        <Filename Value="FormUnitImport.lfm"/>
-        <Caret Line="99" Column="22" TopLine="81"/>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="214" Column="42" TopLine="186"/>
       </Position18>
+      <Position19>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="430" Column="40" TopLine="402"/>
+      </Position19>
+      <Position20>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="437" Column="40" TopLine="409"/>
+      </Position20>
+      <Position21>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="443" Column="40" TopLine="415"/>
+      </Position21>
+      <Position22>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="498" Column="66" TopLine="480"/>
+      </Position22>
+      <Position23>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="394" Column="15" TopLine="366"/>
+      </Position23>
+      <Position24>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="393" Column="15" TopLine="365"/>
+      </Position24>
+      <Position25>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="392" Column="15" TopLine="364"/>
+      </Position25>
+      <Position26>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="40" Column="24" TopLine="26"/>
+      </Position26>
     </JumpHistory>
   </ProjectSession>
   <EditorMacros Count="0"/>

@@ -140,6 +140,8 @@ type
       property Frames[FrameIndex: integer]: TLaserFrame read GetFrames;
    end;
 
+   { TFormMain }
+
    TFormMain = class(TForm)
     aAddFrame: TAction;
     aCheckAllLinks: TAction;
@@ -167,8 +169,6 @@ type
     Checkframelinks1: TMenuItem;
     dockBottom: TPanel;
     dockFiles1: TPanel;
-    dockLeft: TPanel;
-    dockLowerFiles: TPanel;
     dockTools: TPanel;
     ilOptions: TImageList;
     ilTools: TImageList;
@@ -383,13 +383,13 @@ type
     toolbarFiles: TToolBar;
     toolbarPlay: TToolBar;
     toolbarPointsFrames: TToolBar;
-    ToolbarSep971: TToolBar;
-    ToolbarSep972: TToolBar;
-    ToolbarSep973: TToolBar;
-    ToolbarSep974: TToolBar;
-    ToolbarSep975: TToolBar;
-    ToolbarSep976: TToolBar;
-    ToolbarSep977: TToolBar;
+    ToolbarSep971: TToolButton;
+    ToolbarSep973: TToolButton;
+    ToolbarSep974: TToolButton;
+    ToolbarSep975: TToolButton;
+    ToolbarSep976: TToolButton;
+    ToolbarSep977: TToolButton;
+    ToolbarSep978: TToolButton;
     toolbarTools: TToolBar;
     toolwinTimeline: TPanel;
     procedure aAddFrameExecute(Sender: TObject);
