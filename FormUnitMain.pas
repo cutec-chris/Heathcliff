@@ -165,11 +165,11 @@ type
     aSaveFile: TAction;
     aShowPreview: TAction;
     Checkframelinks1: TMenuItem;
-    dockBottom: TTBDock;
-    dockFiles1: TDock97;
-    dockLeft: TDock97;
-    dockLowerFiles: TTBDock;
-    dockTools: TDock97;
+    dockBottom: TPanel;
+    dockFiles1: TPanel;
+    dockLeft: TPanel;
+    dockLowerFiles: TPanel;
+    dockTools: TPanel;
     ilOptions: TImageList;
     ilTools: TImageList;
     ilWork: TImageList;
@@ -304,7 +304,7 @@ type
     miZoom6: TMenuItem;
     miZoom7: TMenuItem;
     miZoom8: TMenuItem;
-    mpPreview: TMediaPlayer;
+    //mpPreview: TMediaPlayer;
     myal: TActionList;
     menuMain: TMainMenu;
     N1: TMenuItem;
@@ -333,65 +333,65 @@ type
     pmLastFiles: TPopupMenu;
     pmPoints: TPopupMenu;
     pmZoom: TPopupMenu;
-    sbBlank: TToolbarButton97;
-    sbCloseLoop: TToolbarButton97;
-    sbColor: TToolbarButton97;
-    sbEffect: TToolbarButton97;
-    sbFlipX: TToolbarButton97;
-    sbFlipY: TToolbarButton97;
+    sbBlank: TToolButton;
+    sbCloseLoop: TToolButton;
+    sbColor: TToolButton;
+    sbEffect: TToolButton;
+    sbFlipX: TToolButton;
+    sbFlipY: TToolButton;
     sbFrame: TStatusBar;
-    sbFullImg: TToolbarButton97;
-    sbLock: TToolbarButton97;
-    sbNoImg: TToolbarButton97;
-    sbPartImg: TToolbarButton97;
-    sbRuler: TToolbarButton97;
-    sbSharpen: TToolbarButton97;
-    sbShowBackframe: TToolbarButton97;
-    sbShowGrid: TToolbarButton97;
-    sbShowLinks: TToolbarButton97;
-    sbShowNumPoints: TToolbarButton97;
-    sbShowPoints: TToolbarButton97;
-    sbShowReal: TToolbarButton97;
-    sbSnapGrid: TToolbarButton97;
-    sbSnapHelp: TToolbarButton97;
+    sbFullImg: TToolButton;
+    sbLock: TToolButton;
+    sbNoImg: TToolButton;
+    sbPartImg: TToolButton;
+    sbRuler: TToolButton;
+    sbSharpen: TToolButton;
+    sbShowBackframe: TToolButton;
+    sbShowGrid: TToolButton;
+    sbShowLinks: TToolButton;
+    sbShowNumPoints: TToolButton;
+    sbShowPoints: TToolButton;
+    sbShowReal: TToolButton;
+    sbSnapGrid: TToolButton;
+    sbSnapHelp: TToolButton;
     sdLC1: TSaveDialog;
-    tbAdd: TToolbarButton97;
-    tbCompile: TToolbarButton97;
-    tbDel: TToolbarButton97;
-    tbGeo: TToolbarButton97;
-    tbHelp: TToolbarButton97;
-    tbImportFrame: TToolbarButton97;
-    tbImportShow: TToolbarButton97;
-    tbLive: TToolbarButton97;
+    tbAdd: TToolButton;
+    tbCompile: TToolButton;
+    tbDel: TToolButton;
+    tbGeo: TToolButton;
+    tbHelp: TToolButton;
+    tbImportFrame: TToolButton;
+    tbImportShow: TToolButton;
+    tbLive: TToolButton;
     tbmiFrameEffectParam: TMenuItem;
-    tbMove: TToolbarButton97;
-    tbNew: TToolbarButton97;
-    tbOpen: TToolbarButton97;
-    tbPlay: TToolbarButton97;
-    tbPointTools: TToolbarButton97;
-    tbRepeat: TToolbarButton97;
-    tbSave: TToolbarButton97;
-    tbShowPreview: TToolbarButton97;
-    tbStop: TToolbarButton97;
+    tbMove: TToolButton;
+    tbNew: TToolButton;
+    tbOpen: TToolButton;
+    tbPlay: TToolButton;
+    tbPointTools: TToolButton;
+    tbRepeat: TToolButton;
+    tbSave: TToolButton;
+    tbShowPreview: TToolButton;
+    tbStop: TToolButton;
     tbTimeline: TToolBar;
     tbTimelineLeft: TToolButton;
     tbTimelineRight: TToolButton;
     tbTimelineZoomIn: TToolButton;
     tbTimelineZoomOut: TToolButton;
-    tbZoom: TToolbarButton97;
-    toolbarDisplay: TToolbar97;
-    toolbarFiles: TToolbar97;
-    toolbarPlay: TToolbar97;
-    toolbarPointsFrames: TToolbar97;
-    ToolbarSep971: TToolbarSep97;
-    ToolbarSep972: TToolbarSep97;
-    ToolbarSep973: TToolbarSep97;
-    ToolbarSep974: TToolbarSep97;
-    ToolbarSep975: TToolbarSep97;
-    ToolbarSep976: TToolbarSep97;
-    ToolbarSep977: TToolbarSep97;
-    toolbarTools: TToolbar97;
-    toolwinTimeline: TTBToolWindow;
+    tbZoom: TToolButton;
+    toolbarDisplay: TToolBar;
+    toolbarFiles: TToolBar;
+    toolbarPlay: TToolBar;
+    toolbarPointsFrames: TToolBar;
+    ToolbarSep971: TToolBar;
+    ToolbarSep972: TToolBar;
+    ToolbarSep973: TToolBar;
+    ToolbarSep974: TToolBar;
+    ToolbarSep975: TToolBar;
+    ToolbarSep976: TToolBar;
+    ToolbarSep977: TToolBar;
+    toolbarTools: TToolBar;
+    toolwinTimeline: TPanel;
     procedure aAddFrameExecute(Sender: TObject);
     procedure aCheckAllLinksExecute(Sender: TObject);
     procedure aCheckFrameLinksExecute(Sender: TObject);
@@ -1818,7 +1818,7 @@ begin
                MyTimes[1] := GetValueDefault('Time10Degree',55);
                MyTimes[2] := GetValueDefault('Time40Degree',66);
                MyTimes[3] := GetValueDefault('TimeEdges',30);
-               RegLoadToolbarPositionsEx(Self,HKEY_CURRENT_USER,'\SOFTWARE\PepiMK Software\Heathcliff\Panels');
+               //RegLoadToolbarPositionsEx(Self,HKEY_CURRENT_USER,'\SOFTWARE\PepiMK Software\Heathcliff\Panels');
             end;
          finally
             reg.CloseKey;
@@ -2215,7 +2215,7 @@ begin
          SetValue('TimeEdges',MyTimes[3]);
          CloseKey;
       end;
-      RegSaveToolbarPositionsEx(Self, HKEY_CURRENT_USER, '\SOFTWARE\PepiMK Software\Heathcliff\Panels');
+      //RegSaveToolbarPositionsEx(Self, HKEY_CURRENT_USER, '\SOFTWARE\PepiMK Software\Heathcliff\Panels');
    finally
       FreeAndNil(reg);
    end;
@@ -2944,7 +2944,7 @@ end;
 
 procedure TFormMain.aHelpContentsExecute(Sender: TObject);
 begin
-   Application.HelpJump('HelpContents');
+  //Application.HelpJump('HelpContents');
 end;
 
 procedure TFormMain.sbShowNumPointsClick(Sender: TObject);
@@ -3515,7 +3515,7 @@ end;
 
 //### Main MakeWave ##########################################################
 begin
-   mpPreview.Close;
+   //mpPreview.Close;
    iFrameDuration := 0;
    FormStatus.Show;
    SetLength(wavedata,0);  SetLength(waveblank,0);
@@ -3876,11 +3876,12 @@ procedure TFormMain.tbPlayClick(Sender: TObject);
 begin
    if Yoghurt<>nil then begin
       if FileExistsUTF8(Yoghurt.Filename+'.WAV') { *Converted from FileExists* } then begin
-         mpPreview.Filename := Yoghurt.Filename+'.WAV';
+         {mpPreview.Filename := Yoghurt.Filename+'.WAV';
          mpPreview.Notify := false;
          mpPreview.Open;
          mpPreview.Notify := true;
          mpPreview.Play;
+         }
          tbPlay.Enabled := false;
          tbStop.Enabled := true;
       end else MessageDlg('You need to compile this show first.',mtError,[mbOK],0);
@@ -3891,14 +3892,17 @@ procedure TFormMain.tbStopClick(Sender: TObject);
 begin
    tbPlay.Enabled := true;
    tbStop.Enabled := false;
+   {
    if not (mpPreview.Mode in [mpNotReady,mpStopped]) then begin
       mpPreview.Notify := false;
       mpPreview.Close;
    end;
+   }
 end;
 
 procedure TFormMain.mpPreviewNotify(Sender: TObject);
 begin
+   {
    case mpPreview.Mode of
       mpPlaying: begin
          tbPlay.Enabled := false;
@@ -3914,6 +3918,7 @@ begin
          end;
       end;
    end;
+   }
 end;
 
 procedure TFormMain.toolbarPlayClose(Sender: TObject);
@@ -3946,15 +3951,15 @@ begin
       myf := Yoghurt.frames[CurrentFrame];
       SetLength(mya,0); SetLength(myb,0);
       if myf.Points.count>2 then begin
-         PlaySound(nil, 0, SND_MEMORY  or SND_ASYNC or SND_LOOP);
+         //PlaySound(nil, 0, SND_MEMORY  or SND_ASYNC or SND_LOOP);
          msLivePreview.Clear;
          framedauer := 0; written := 0;
          FrameToArray(myf,mya,myb,framedauer);
          CreateWaveHeader(TStream(msLivePreview),framedauer,1);
          WritePointArray(TStream(msLivePreview),mya,myb,false,written,p);
-         ok := PlaySound(msLivePreview.Memory, 0, SND_MEMORY  or SND_ASYNC or SND_LOOP)
-      end else PlaySound(nil, 0, SND_MEMORY  or SND_ASYNC or SND_LOOP);
-   end else PlaySound(nil, 0, SND_MEMORY  or SND_ASYNC or SND_LOOP);
+         //ok := PlaySound(msLivePreview.Memory, 0, SND_MEMORY  or SND_ASYNC or SND_LOOP)
+      end else;// PlaySound(nil, 0, SND_MEMORY  or SND_ASYNC or SND_LOOP);
+   end else;// PlaySound(nil, 0, SND_MEMORY  or SND_ASYNC or SND_LOOP);
    if not ok then begin
       tbLive.Down := false;
       MessageDlg('Sorry, sound can''t be played.',mtError,[mbOK],0);

@@ -44,7 +44,9 @@
       <Unit1>
         <Filename Value="FormUnitStatus.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormStatus"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitStatus"/>
       </Unit1>
       <Unit2>
@@ -58,19 +60,25 @@
       <Unit3>
         <Filename Value="FormUnitDebug.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDebug"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitDebug"/>
       </Unit3>
       <Unit4>
         <Filename Value="FormUnitDelays.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDelays"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitDelays"/>
       </Unit4>
       <Unit5>
         <Filename Value="FormUnitHelpLines.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormHelpLines"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitHelpLines"/>
       </Unit5>
       <Unit6>
@@ -82,31 +90,41 @@
       <Unit7>
         <Filename Value="FormUnitLicense.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormLicense"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitLicense"/>
       </Unit7>
       <Unit8>
         <Filename Value="FormUnitMain.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormMain"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitMain"/>
       </Unit8>
       <Unit9>
         <Filename Value="FormUnitPad.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormSketchpad"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitPad"/>
       </Unit9>
       <Unit10>
         <Filename Value="FormUnitPick.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormPickImage"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitPick"/>
       </Unit10>
       <Unit11>
         <Filename Value="FormUnitPreview.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormPreview"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitPreview"/>
       </Unit11>
       <Unit12>

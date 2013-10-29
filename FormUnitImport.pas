@@ -51,8 +51,8 @@ type
       labelFiletype: TStaticText;
       labelSearchIn: TStaticText;
       lb: TListBox;
-      scbDrives: TShellComboBox;
-      slvFiles: TShellListView;
+      scbDrives: TComboBox;
+      slvFiles: TListView;
       procedure cbFiletypeChange(Sender: TObject);
       procedure editFilenameChange(Sender: TObject);
       procedure FormCreate(Sender: TObject);
@@ -126,7 +126,7 @@ end;
 procedure TFormImport.slvFilesClick(Sender: TObject);
 begin
    if Assigned(slvFiles.Selected) then begin
-      editFilename.Text := slvFiles.SelectedFolder.PathName + slvFiles.Selected.Caption;
+      //TODO:editFilename.Text := slvFiles.SelectedFolder.PathName + slvFiles.Selected.Caption;
       bnImport.Enabled := false;
    end;
 end;

@@ -3,7 +3,7 @@
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="13">
+    <Units Count="14">
       <Unit0>
         <Filename Value="Heathcliff.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -11,19 +11,24 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit0>
       <Unit1>
         <Filename Value="FormUnitStatus.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormStatus"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitStatus"/>
+        <EditorIndex Value="12"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <CursorPos X="34" Y="4"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit1>
       <Unit2>
@@ -36,7 +41,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="25" Y="43"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit2>
       <Unit3>
@@ -50,7 +55,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="24" Y="43"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit3>
@@ -65,7 +70,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="25" Y="43"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -81,7 +86,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="28" Y="48"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -93,9 +98,9 @@
         <UnitName Value="FormUnitImport"/>
         <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="125"/>
-        <CursorPos X="18" Y="54"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="112"/>
+        <CursorPos X="14" Y="129"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit6>
@@ -106,12 +111,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitLicense"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
         <TopLine Value="27"/>
-        <CursorPos X="26" Y="43"/>
-        <UsageCount Value="20"/>
+        <CursorPos X="26" Y="32"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -119,45 +123,66 @@
       <Unit8>
         <Filename Value="FormUnitMain.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormMain"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitMain"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="3945"/>
+        <CursorPos X="13" Y="3962"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit8>
       <Unit9>
         <Filename Value="FormUnitPad.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormSketchpad"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitPad"/>
+        <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="22"/>
+        <CursorPos X="6" Y="40"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit9>
       <Unit10>
         <Filename Value="FormUnitPick.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormPickImage"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitPick"/>
+        <EditorIndex Value="10"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="22"/>
+        <CursorPos X="28" Y="43"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit10>
       <Unit11>
         <Filename Value="FormUnitPreview.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormPreview"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitPreview"/>
+        <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="19"/>
+        <CursorPos X="26" Y="43"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit11>
       <Unit12>
@@ -168,19 +193,145 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="15"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit12>
+      <Unit13>
+        <Filename Value="FormUnitMain.lfm"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="837"/>
+        <CursorPos X="37" Y="865"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit13>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="1" HistoryIndex="0">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="FormUnitImport.pas"/>
-        <Caret Line="44" Column="25" TopLine="19"/>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="4" Column="42" TopLine="1"/>
       </Position1>
+      <Position2>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="394" Column="28" TopLine="179"/>
+      </Position2>
+      <Position3>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="164" Column="42" TopLine="152"/>
+      </Position3>
+      <Position4>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="3" Column="64" TopLine="1"/>
+      </Position4>
+      <Position5>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="163" Column="53" TopLine="152"/>
+      </Position5>
+      <Position6>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="3" Column="46" TopLine="1"/>
+      </Position6>
+      <Position7>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="172" Column="22" TopLine="152"/>
+      </Position7>
+      <Position8>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="5" Column="79" TopLine="1"/>
+      </Position8>
+      <Position9>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="307" Column="7" TopLine="290"/>
+      </Position9>
+      <Position10>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="334" Column="35" TopLine="319"/>
+      </Position10>
+      <Position11>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="3" Column="63" TopLine="1"/>
+      </Position11>
+      <Position12>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="381" Column="24" TopLine="353"/>
+      </Position12>
+      <Position13>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="372" Column="69" TopLine="365"/>
+      </Position13>
+      <Position14>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="2" Column="59" TopLine="1"/>
+      </Position14>
+      <Position15>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="393" Column="27" TopLine="365"/>
+      </Position15>
+      <Position16>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="384" Column="39" TopLine="369"/>
+      </Position16>
+      <Position17>
+        <Filename Value="FormUnitMain.lfm"/>
+        <Caret Line="4" Column="63" TopLine="1"/>
+      </Position17>
+      <Position18>
+        <Filename Value="FormUnitImport.pas"/>
+        <Caret Line="54" Column="18" TopLine="125"/>
+      </Position18>
+      <Position19>
+        <Filename Value="FormUnitImport.pas"/>
+        <Caret Line="55" Column="18" TopLine="37"/>
+      </Position19>
+      <Position20>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="392" Column="28" TopLine="369"/>
+      </Position20>
+      <Position21>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="1821" Column="18" TopLine="1804"/>
+      </Position21>
+      <Position22>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="2218" Column="9" TopLine="2201"/>
+      </Position22>
+      <Position23>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="2947" Column="3" TopLine="2930"/>
+      </Position23>
+      <Position24>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="3518" Column="6" TopLine="3501"/>
+      </Position24>
+      <Position25>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="3883" Column="70" TopLine="3862"/>
+      </Position25>
+      <Position26>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="2792" Column="4" TopLine="2715"/>
+      </Position26>
+      <Position27>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="3900" Column="5" TopLine="3878"/>
+      </Position27>
+      <Position28>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="3921" Column="5" TopLine="3888"/>
+      </Position28>
+      <Position29>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="3954" Column="12" TopLine="3937"/>
+      </Position29>
+      <Position30>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="3961" Column="16" TopLine="3944"/>
+      </Position30>
     </JumpHistory>
   </ProjectSession>
   <EditorMacros Count="0"/>
