@@ -267,20 +267,20 @@ object FormMain: TFormMain
     end
   end
   object dockTools: TPanel
-    Left = 736
+    Left = 728
     Height = 507
     Top = 0
-    Width = 35
+    Width = 43
     Align = alRight
     BevelOuter = bvNone
     ClientHeight = 507
-    ClientWidth = 35
+    ClientWidth = 43
     TabOrder = 1
     object toolbarDisplay: TToolBar
       Left = 0
-      Height = 332
+      Height = 354
       Top = 110
-      Width = 35
+      Width = 43
       HelpContext = 3
       AutoSize = True
       Caption = 'Display options'
@@ -289,82 +289,89 @@ object FormMain: TFormMain
       object sbFlipX: TToolButton
         Left = 1
         Hint = 'Flip at X-Axis'
-        Top = 288
+        Top = 310
         AllowAllUp = True
         ImageIndex = 12
         OnClick = sbFlipXClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
       object sbShowPoints: TToolButton
-        Left = 11
+        Left = 1
         Hint = 'Show points along frame'
-        Top = 2
+        Top = 24
         AllowAllUp = True
         DropdownMenu = pmCircles
         ImageIndex = 0
         OnClick = sbShowPointsClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
       object sbFlipY: TToolButton
         Left = 1
         Hint = 'Flip at Y-Axis'
-        Top = 310
+        Top = 332
         AllowAllUp = True
         ImageIndex = 11
         OnClick = sbFlipYClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
       object sbShowNumPoints: TToolButton
         Left = 1
         Hint = 'Show numbers of points'
-        Top = 24
+        Top = 46
         AllowAllUp = True
         DropdownMenu = pmCircles
         ImageIndex = 1
         OnClick = sbShowNumPointsClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
       object sbFullImg: TToolButton
         Left = 1
         Hint = 'Show full background image'
-        Top = 266
+        Top = 288
         AllowAllUp = True
         DropdownMenu = pmBackImg
         ImageIndex = 10
         OnClick = sbFullImgClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
       object sbPartImg: TToolButton
         Left = 1
         Hint = 'Show only part of background image'
-        Top = 244
+        Top = 266
         AllowAllUp = True
         DropdownMenu = pmBackImg
         ImageIndex = 9
         OnClick = sbPartImgClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
       object sbShowBackframe: TToolButton
         Left = 1
         Hint = 'Show background frame'
-        Top = 46
+        Top = 68
         AllowAllUp = True
         DropdownMenu = pmCircles
         ImageIndex = 2
         OnClick = sbShowBackframeClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
       object sbNoImg: TToolButton
         Left = 1
         Hint = 'Dont show background image'
-        Top = 222
+        Top = 244
         AllowAllUp = True
         Down = True
         DropdownMenu = pmBackImg
@@ -372,61 +379,67 @@ object FormMain: TFormMain
         OnClick = sbNoImgClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
       object sbShowLinks: TToolButton
         Left = 1
         Hint = 'Show links to background frame'
-        Top = 68
+        Top = 90
         AllowAllUp = True
         DropdownMenu = pmCircles
         ImageIndex = 3
         OnClick = sbShowLinksClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
       object sbShowReal: TToolButton
         Left = 1
         Hint = 'Show unoptimized edges'
-        Top = 90
+        Top = 112
         AllowAllUp = True
         DropdownMenu = pmCircles
         ImageIndex = 4
         OnClick = sbShowRealClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
       object sbSnapGrid: TToolButton
         Left = 1
         Hint = 'Snap points to grid'
-        Top = 156
+        Top = 178
         AllowAllUp = True
         DropdownMenu = pmGrid
         ImageIndex = 7
         OnClick = sbSnapGridClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
       object sbCloseLoop: TToolButton
         Left = 1
         Hint = 'Close loop by connecting last to first point'
-        Top = 112
+        Top = 134
         AllowAllUp = True
         DropdownMenu = pmCircles
         ImageIndex = 5
         OnClick = sbCloseLoopClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
       object sbShowGrid: TToolButton
         Left = 1
         Hint = 'Show (and choose) grid'
-        Top = 134
+        Top = 156
         AllowAllUp = True
         DropdownMenu = pmGrid
         ImageIndex = 6
         OnClick = sbShowGridClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
       object ToolbarSep971: TToolButton
         Left = 1
@@ -437,31 +450,33 @@ object FormMain: TFormMain
       object sbRuler: TToolButton
         Left = 1
         Hint = 'Display ruler to the left and top of the drawing area'
-        Top = 200
+        Top = 222
         AllowAllUp = True
         DropdownMenu = pmGrid
         ImageIndex = 18
         OnClick = sbRulerClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
       object sbSnapHelp: TToolButton
         Left = 1
         Hint = 'Snaps points to helplines'
-        Top = 178
+        Top = 200
         AllowAllUp = True
         DropdownMenu = pmGrid
         ImageIndex = 19
         OnClick = sbSnapHelpClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
     end
     object toolbarPointsFrames: TToolBar
       Left = 0
       Height = 110
       Top = 0
-      Width = 35
+      Width = 43
       HelpContext = 3
       AutoSize = True
       Caption = 'Point & frame properties'
@@ -504,6 +519,7 @@ object FormMain: TFormMain
         OnClick = sbEffectClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
       object sbBlank: TToolButton
         Left = 1
@@ -525,6 +541,7 @@ object FormMain: TFormMain
         OnClick = sbColorClick
         ParentShowHint = False
         ShowHint = True
+        Style = tbsDropDown
       end
     end
   end
