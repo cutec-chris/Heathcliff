@@ -23,13 +23,13 @@ object FormMain: TFormMain
   LCLVersion = '1.3'
   object panelLeft: TPanel
     Left = 0
-    Height = 544
+    Height = 528
     Top = 0
     Width = 149
     Align = alLeft
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 544
+    ClientHeight = 528
     ClientWidth = 149
     TabOrder = 0
     object dockFiles1: TPanel
@@ -119,6 +119,7 @@ object FormMain: TFormMain
           Left = 57
           Hint = 'Use this to delete points'
           Top = 2
+          AllowAllUp = True
           ImageIndex = 2
           OnClick = tbDelClick
           ParentShowHint = False
@@ -128,6 +129,7 @@ object FormMain: TFormMain
           Left = 11
           Hint = 'Use this tool to select and move points'
           Top = 2
+          AllowAllUp = True
           Down = True
           ImageIndex = 0
           OnClick = tbMoveClick
@@ -138,6 +140,7 @@ object FormMain: TFormMain
           Left = 34
           Hint = 'Use this tool to add points'
           Top = 2
+          AllowAllUp = True
           ImageIndex = 1
           OnClick = tbAddClick
           ParentShowHint = False
@@ -147,6 +150,7 @@ object FormMain: TFormMain
           Left = 80
           Hint = 'Use this to zoom in and out'
           Top = 2
+          AllowAllUp = True
           DropdownMenu = pmZoom
           ImageIndex = 3
           OnClick = tbZoomClick
@@ -157,6 +161,7 @@ object FormMain: TFormMain
           Left = 103
           Hint = '&Sharpen edges && blank lines'
           Top = 2
+          AllowAllUp = True
           DropdownMenu = pmPoints
           ImageIndex = 4
           OnClick = tbPointToolsClick
@@ -167,6 +172,7 @@ object FormMain: TFormMain
           Left = 126
           Hint = 'Left click sets equilateral center, right click sets starting point'
           Top = 2
+          AllowAllUp = True
           DropdownMenu = pmGeo
           ImageIndex = 8
           OnClick = tbGeoClick
@@ -238,7 +244,7 @@ object FormMain: TFormMain
     end
     object lbThumbs: TListBox
       Left = 0
-      Height = 443
+      Height = 427
       Top = 80
       Width = 149
       Align = alClient
@@ -258,7 +264,7 @@ object FormMain: TFormMain
     object sbFrame: TStatusBar
       Left = 0
       Height = 21
-      Top = 523
+      Top = 507
       Width = 149
       Panels = <      
         item
@@ -275,12 +281,12 @@ object FormMain: TFormMain
   end
   object dockTools: TPanel
     Left = 744
-    Height = 544
+    Height = 528
     Top = 0
     Width = 27
     Align = alRight
     BevelOuter = bvNone
-    ClientHeight = 544
+    ClientHeight = 528
     ClientWidth = 27
     TabOrder = 1
     object toolbarDisplay: TToolBar
@@ -549,28 +555,28 @@ object FormMain: TFormMain
   end
   object dockBottom: TPanel
     Left = 0
-    Height = 24
-    Top = 544
+    Height = 40
+    Top = 528
     Width = 771
     Align = alBottom
     BevelOuter = bvNone
-    ClientHeight = 24
+    ClientHeight = 40
     ClientWidth = 771
     TabOrder = 2
     object toolwinTimeline: TPanel
       Left = 0
-      Height = 24
+      Height = 40
       Top = 0
       Width = 771
       Align = alClient
       BevelOuter = bvNone
       Caption = 'toolwinTimeline'
-      ClientHeight = 24
+      ClientHeight = 40
       ClientWidth = 771
       TabOrder = 0
       object iTimeline: TImage
         Left = 94
-        Height = 24
+        Height = 40
         Top = 0
         Width = 677
         Align = alClient
@@ -578,7 +584,7 @@ object FormMain: TFormMain
       object tbTimeline: TToolBar
         Tag = 4
         Left = 0
-        Height = 24
+        Height = 40
         Top = 0
         Width = 94
         Align = alLeft

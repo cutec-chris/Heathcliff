@@ -1860,6 +1860,8 @@ begin
       //panelPointY.Caption := 'Y: -';
       FormSketchpad.panelFrameSwitcher.Caption := '0';
       FormSketchpad.Caption := fn;
+      FormSketchpad.Parent:=Self;
+      FormSketchpad.Align:=alClient;
       lbThumbs.Items.Clear;
    end;
 
@@ -2811,6 +2813,9 @@ begin
       FormSketchpad.sbFrames.Max := 0;
       FormSketchpad.panelFrameSwitcher.Caption := '0';
       FormSketchpad.Caption := 'new file';
+      FormSketchpad.Caption := 'new file';
+      FormSketchpad.Parent:=Self;
+      FormSketchpad.Align:=alClient;
       Yoghurt.Filename := '';
       Yoghurt.Add(myf);
       lbThumbs.Items.Clear;

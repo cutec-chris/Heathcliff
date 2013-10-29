@@ -11,7 +11,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit0>
@@ -22,11 +22,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitStatus"/>
-        <EditorIndex Value="12"/>
+        <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="34" Y="4"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit1>
@@ -40,7 +40,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="25" Y="43"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit2>
       <Unit3>
@@ -54,7 +54,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="24" Y="43"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit3>
@@ -69,7 +69,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="25" Y="43"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit4>
@@ -84,7 +84,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="28" Y="48"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -98,7 +98,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="112"/>
         <CursorPos X="14" Y="129"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit6>
@@ -113,7 +113,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="26"/>
         <CursorPos X="26" Y="32"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -126,11 +126,11 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitMain"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="10"/>
+        <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="26"/>
-        <CursorPos X="24" Y="40"/>
-        <UsageCount Value="23"/>
+        <TopLine Value="1845"/>
+        <CursorPos X="1" Y="1865"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -144,9 +144,9 @@
         <UnitName Value="FormUnitPad"/>
         <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="97"/>
-        <CursorPos X="45" Y="99"/>
-        <UsageCount Value="23"/>
+        <TopLine Value="70"/>
+        <CursorPos X="17" Y="87"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -158,11 +158,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitPick"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="8"/>
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="28" Y="43"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -174,11 +174,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitPreview"/>
-        <EditorIndex Value="11"/>
+        <EditorIndex Value="10"/>
         <WindowIndex Value="0"/>
         <TopLine Value="19"/>
         <CursorPos X="26" Y="43"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -199,12 +199,10 @@
         <ComponentName Value="FormMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="8"/>
         <WindowIndex Value="0"/>
         <TopLine Value="5317"/>
         <CursorPos X="98" Y="5328"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit13>
       <Unit14>
@@ -241,111 +239,127 @@
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="26" HistoryIndex="25">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="3" Column="68" TopLine="1"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="1843" Column="62" TopLine="1834"/>
       </Position1>
       <Position2>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="90" Column="42" TopLine="62"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="1861" Column="20" TopLine="1833"/>
       </Position2>
       <Position3>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="103" Column="42" TopLine="75"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="1862" Column="20" TopLine="1834"/>
       </Position3>
       <Position4>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="214" Column="42" TopLine="186"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="1880" Column="23" TopLine="1853"/>
       </Position4>
       <Position5>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="430" Column="40" TopLine="402"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="1898" Column="20" TopLine="1870"/>
       </Position5>
       <Position6>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="437" Column="40" TopLine="409"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="2030" Column="17" TopLine="2002"/>
       </Position6>
       <Position7>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="443" Column="40" TopLine="415"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="2235" Column="35" TopLine="2207"/>
       </Position7>
       <Position8>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="2" Column="61" TopLine="1"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="2237" Column="35" TopLine="2209"/>
       </Position8>
       <Position9>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="90" Column="42" TopLine="62"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="2256" Column="30" TopLine="2228"/>
       </Position9>
       <Position10>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="103" Column="42" TopLine="75"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="2257" Column="23" TopLine="2229"/>
       </Position10>
       <Position11>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="214" Column="42" TopLine="186"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="2258" Column="23" TopLine="2230"/>
       </Position11>
       <Position12>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="430" Column="40" TopLine="402"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="2364" Column="20" TopLine="2336"/>
       </Position12>
       <Position13>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="437" Column="40" TopLine="409"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="2365" Column="20" TopLine="2337"/>
       </Position13>
       <Position14>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="443" Column="40" TopLine="415"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="425" Column="15" TopLine="409"/>
       </Position14>
       <Position15>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="20" Column="54" TopLine="1"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="638" Column="15" TopLine="609"/>
       </Position15>
       <Position16>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="90" Column="42" TopLine="74"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="6" Column="74" TopLine="1"/>
       </Position16>
       <Position17>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="103" Column="42" TopLine="75"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="1139" Column="20" TopLine="1111"/>
       </Position17>
       <Position18>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="214" Column="42" TopLine="186"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="1140" Column="39" TopLine="1112"/>
       </Position18>
       <Position19>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="430" Column="40" TopLine="402"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="1157" Column="79" TopLine="1129"/>
       </Position19>
       <Position20>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="437" Column="40" TopLine="409"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="1158" Column="63" TopLine="1130"/>
       </Position20>
       <Position21>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="443" Column="40" TopLine="415"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="1160" Column="79" TopLine="1132"/>
       </Position21>
       <Position22>
-        <Filename Value="FormUnitMain.lfm"/>
-        <Caret Line="498" Column="66" TopLine="480"/>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="1161" Column="63" TopLine="1133"/>
       </Position22>
       <Position23>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="394" Column="15" TopLine="366"/>
+        <Caret Line="1181" Column="74" TopLine="1165"/>
       </Position23>
       <Position24>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="393" Column="15" TopLine="365"/>
+        <Caret Line="1182" Column="63" TopLine="1165"/>
       </Position24>
       <Position25>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="392" Column="15" TopLine="364"/>
+        <Caret Line="1184" Column="74" TopLine="1165"/>
       </Position25>
       <Position26>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="40" Column="24" TopLine="26"/>
+        <Caret Line="1185" Column="63" TopLine="1165"/>
       </Position26>
+      <Position27>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="1206" Column="23" TopLine="1178"/>
+      </Position27>
+      <Position28>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="1844" Column="42" TopLine="1881"/>
+      </Position28>
+      <Position29>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="2817" Column="1" TopLine="2800"/>
+      </Position29>
+      <Position30>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="2835" Column="16" TopLine="2825"/>
+      </Position30>
     </JumpHistory>
   </ProjectSession>
   <EditorMacros Count="0"/>
