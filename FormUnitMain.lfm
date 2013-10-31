@@ -5,7 +5,7 @@ object FormMain: TFormMain
   Top = 139
   Width = 771
   BorderIcons = [biSystemMenu, biMinimize, biMaximize, biHelp]
-  Caption = 'Heathcliff 4 Catweazle LC1 - Yoghurt Mixer'
+  Caption = 'Heathcliff 5'
   ClientHeight = 568
   ClientWidth = 771
   Color = clBtnFace
@@ -25,29 +25,29 @@ object FormMain: TFormMain
     Left = 0
     Height = 507
     Top = 0
-    Width = 149
+    Width = 185
     Align = alLeft
     AutoSize = True
     BevelOuter = bvNone
     ClientHeight = 507
-    ClientWidth = 149
+    ClientWidth = 185
     TabOrder = 0
     object dockFiles1: TPanel
       Left = 0
-      Height = 94
+      Height = 72
       Top = 0
-      Width = 149
+      Width = 185
       Align = alTop
       AutoSize = True
       BevelOuter = bvNone
-      ClientHeight = 94
-      ClientWidth = 149
+      ClientHeight = 72
+      ClientWidth = 185
       TabOrder = 0
       object toolbarFiles: TToolBar
         Left = 0
         Height = 24
         Top = 0
-        Width = 149
+        Width = 185
         HelpContext = 3
         AutoSize = True
         Caption = 'File operations'
@@ -62,7 +62,7 @@ object FormMain: TFormMain
           ShowHint = True
         end
         object tbSave: TToolButton
-          Left = 57
+          Left = 69
           Top = 2
           Action = aSaveFile
           AllowAllUp = True
@@ -77,23 +77,24 @@ object FormMain: TFormMain
           DropdownMenu = pmLastFiles
           ParentShowHint = False
           ShowHint = True
+          Style = tbsDropDown
         end
         object tbImportFrame: TToolButton
-          Left = 80
+          Left = 92
           Top = 2
           Action = aImportFrame
           ParentShowHint = False
           ShowHint = True
         end
         object tbHelp: TToolButton
-          Left = 126
+          Left = 138
           Top = 2
           Action = aHelpContents
           ParentShowHint = False
           ShowHint = True
         end
         object tbImportShow: TToolButton
-          Left = 103
+          Left = 115
           Top = 2
           Action = aImportShow
           ParentShowHint = False
@@ -108,9 +109,9 @@ object FormMain: TFormMain
       end
       object toolbarTools: TToolBar
         Left = 0
-        Height = 46
+        Height = 24
         Top = 24
-        Width = 149
+        Width = 185
         HelpContext = 3
         AutoSize = True
         Caption = 'Working tools'
@@ -162,9 +163,9 @@ object FormMain: TFormMain
           Style = tbsDropDown
         end
         object tbPointTools: TToolButton
-          Left = 1
+          Left = 115
           Hint = '&Sharpen edges && blank lines'
-          Top = 24
+          Top = 2
           DropdownMenu = pmPoints
           ImageIndex = 4
           OnClick = tbPointToolsClick
@@ -173,9 +174,9 @@ object FormMain: TFormMain
           Style = tbsDropDown
         end
         object tbGeo: TToolButton
-          Left = 36
+          Left = 150
           Hint = 'Left click sets equilateral center, right click sets starting point'
-          Top = 24
+          Top = 2
           DropdownMenu = pmGeo
           ImageIndex = 8
           OnClick = tbGeoClick
@@ -193,8 +194,8 @@ object FormMain: TFormMain
       object toolbarPlay: TToolBar
         Left = 0
         Height = 24
-        Top = 70
-        Width = 149
+        Top = 48
+        Width = 185
         AutoSize = True
         Caption = 'toolbarPlay'
         Images = ilWork
@@ -248,9 +249,9 @@ object FormMain: TFormMain
     end
     object lbThumbs: TListBox
       Left = 0
-      Height = 413
-      Top = 94
-      Width = 149
+      Height = 435
+      Top = 72
+      Width = 185
       Align = alClient
       Color = clBlack
       ItemHeight = 84
@@ -260,7 +261,7 @@ object FormMain: TFormMain
       OnDrawItem = lbThumbsDrawItem
       OnMouseDown = lbThumbsMouseDown
       PopupMenu = pmFrame
-      ScrollWidth = 147
+      ScrollWidth = 183
       Style = lbOwnerDrawFixed
       TabOrder = 1
       TopIndex = -1

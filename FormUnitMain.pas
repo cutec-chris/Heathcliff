@@ -876,7 +876,7 @@ var f: file;
     rword: word;
     bFileVersion: byte;
 begin
-   if FileExistsUTF8(Filename) { *Converted from FileExists* } then begin
+   if FileExistsUTF8(Filename) then begin
       iFrameCount := 0;
       FileMode := 0;
       iOldPointCount := 0;
@@ -946,29 +946,32 @@ begin
                if bFileVersion>2 then begin
                   BlockRead(f,w,2);
                   SetLength(fFrame.HelpLines.x,w);
-                  for i := 0 to Pred(w) do begin
-                     BlockRead(f,bb,1);
-                     fFrame.HelpLines.x[i] := bb;
-                  end;
+                  if w>0 then
+                    for i := 0 to Pred(w) do begin
+                       BlockRead(f,bb,1);
+                       fFrame.HelpLines.x[i] := bb;
+                    end;
                   BlockRead(f,w,2);
                   SetLength(fFrame.HelpLines.y,w);
-                  for i := 0 to Pred(w) do begin
-                     BlockRead(f,bb,1);
-                     fFrame.HelpLines.y[i] := bb;
-                  end;
+                  if w>0 then
+                    for i := 0 to Pred(w) do begin
+                       BlockRead(f,bb,1);
+                       fFrame.HelpLines.y[i] := bb;
+                    end;
                   BlockRead(f,w,2);
                   SetLength(fFrame.HelpLines.d[0],w);
                   SetLength(fFrame.HelpLines.d[1],w);
-                  for i := 0 to Pred(w) do begin
-                     BlockRead(f,bb,1);
-                     fFrame.HelpLines.d[0,i].x := bb;
-                     BlockRead(f,bb,1);
-                     fFrame.HelpLines.d[0,i].y := bb;
-                     BlockRead(f,bb,1);
-                     fFrame.HelpLines.d[1,i].x := bb;
-                     BlockRead(f,bb,1);
-                     fFrame.HelpLines.d[1,i].y := bb;
-                  end;
+                  if w>0 then
+                    for i := 0 to Pred(w) do begin
+                       BlockRead(f,bb,1);
+                       fFrame.HelpLines.d[0,i].x := bb;
+                       BlockRead(f,bb,1);
+                       fFrame.HelpLines.d[0,i].y := bb;
+                       BlockRead(f,bb,1);
+                       fFrame.HelpLines.d[1,i].x := bb;
+                       BlockRead(f,bb,1);
+                       fFrame.HelpLines.d[1,i].y := bb;
+                    end;
                end;
                // points
                BlockRead(f,w,2); // num points
