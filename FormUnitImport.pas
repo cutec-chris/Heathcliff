@@ -61,7 +61,7 @@ type
       procedure slvFilesClick(Sender: TObject);
    private
    public
-      yoghurt: TLaserFrames;
+      FFile: TLaserFrames;
    end;
 
 var
@@ -76,8 +76,8 @@ procedure TFormImport.lbDrawItem(Control: TWinControl; Index: Integer;
 var clLine: TColor;
     sEffectName: string;
 begin
-   if Assigned(yoghurt)
-    then if index<yoghurt.Count
+   if Assigned(FFile)
+    then if index<FFile.Count
      then with (Control as TListBox).Canvas
    do begin
       Brush.Color := clBlack;
@@ -90,18 +90,18 @@ begin
       end;
       Pen.Style := psSolid;
       //MoveTo(Rect.Left,Rect.Bottom-1); LineTo(Rect.Right,Rect.Bottom-1);
-      if ((TLaserFrame(yoghurt.frames[index]).Bits and 1)=0)
+      if ((TLaserFrame(FFile.frames[index]).Bits and 1)=0)
        then clLine := FormMain.MyColors[0,0] else clLine := FormMain.MyColors[1,0];
-      FormMain.DrawThumb(TLaserFrame(yoghurt.frames[index]),(Control as TListBox).Canvas, Rect.Left,Rect.Top+2,4,clLine);
+      FormMain.DrawThumb(TLaserFrame(FFile.frames[index]),(Control as TListBox).Canvas, Rect.Left,Rect.Top+2,4,clLine);
       Font.Color := clLime;
       TextOut(Rect.Left+66,Rect.Top+2,'Frame: ');
       TextOut(Rect.Left+66,Rect.Top+20,'Delay: ');
       TextOut(Rect.Left+66,Rect.Top+34,'Morph: ');
       TextOut(Rect.Left+66,Rect.Top+48,'Effect: ');
-      TextOut(Rect.Left+106,Rect.Top+2,TLaserFrame(yoghurt.frames[index]).framename);
-      TextOut(Rect.Left+106,Rect.Top+20,IntToStr(TLaserFrame(yoghurt.frames[index]).Delay));
-      TextOut(Rect.Left+106,Rect.Top+34,IntToStr(TLaserFrame(yoghurt.frames[index]).Morph));
-      case TLaserFrame(yoghurt.frames[index]).effect of
+      TextOut(Rect.Left+106,Rect.Top+2,TLaserFrame(FFile.frames[index]).framename);
+      TextOut(Rect.Left+106,Rect.Top+20,IntToStr(TLaserFrame(FFile.frames[index]).Delay));
+      TextOut(Rect.Left+106,Rect.Top+34,IntToStr(TLaserFrame(FFile.frames[index]).Morph));
+      case TLaserFrame(FFile.frames[index]).effect of
          0 : sEffectName := 'Slide';
          1 : sEffectName := 'Morph';
          2 : sEffectName := '-plode';
@@ -136,10 +136,10 @@ var i: integer;
 begin
    if FileExistsUTF8(editFilename.Text) { *Converted from FileExists* } then begin
       lb.items.clear;
-      FormMain.LoadFromFile(editFilename.Text, yoghurt, false);
-      if Assigned(yoghurt)
-      then for i := 0 to Pred(yoghurt.Count) do begin
-         lb.items.add(TLaserFrame(yoghurt.Frames[i]).FrameName);
+      FormMain.LoadFromFile(editFilename.Text, FFile, false);
+      if Assigned(FFile)
+      then for i := 0 to Pred(FFile.Count) do begin
+         lb.items.add(TLaserFrame(FFile.Frames[i]).FrameName);
       end;
    end;
 end;

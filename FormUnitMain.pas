@@ -519,7 +519,7 @@ type
     { Public-Deklarationen }
     oldmovepos: TPoint;
     allframes: array of TLaserFrame;
-    Yoghurt: TLaserFrames;
+    FFile: TLaserFrames;
     msLivePreview: TMemoryStream;
     Undo: TUndoData;
     RotStart,RotEnd: TPoint;
@@ -1173,9 +1173,9 @@ var mycopyrect: TRect;
     myf: TLaserFrame;
     c,c2,c3: TColor;
 begin
-   if (Yoghurt <> nil) and (Yoghurt.Count>0) and (not DontDraw) then begin
+   if (FFile <> nil) and (FFile.Count>0) and (not DontDraw) then begin
       Drawing := true;
-      myf := Yoghurt.Frames[currentframe];
+      myf := FFile.Frames[currentframe];
       if miShowRuler.Checked then begin
          FormSketchpad.iTopRuler.Height := TopRulerHeight;
          FormSketchpad.iLeftRuler.Width := LeftRulerWidth;
@@ -1210,7 +1210,7 @@ begin
          if miUseGrid.Checked then DrawGrid(FormSketchpad.pad.canvas,clDkGray);
          if miSnapHelp.Checked then DrawHelpLines(myf,FormSketchpad.pad.canvas,MyOtherColors[myoc_help]);
          if (currentframe>0) and (miShowBackframe.Checked) then begin
-            if (Yoghurt.Frames[Pred(currentframe)].Bits and 1)=0 then begin
+            if (FFile.Frames[Pred(currentframe)].Bits and 1)=0 then begin
                c := MyColors[0,myc_back];
                c2 := MyColors[0,myc_real];
                //c3 := MyColors[0,myc_link];
@@ -1219,8 +1219,8 @@ begin
                c2 := MyColors[1,myc_real];
                //c3 := MyColors[1,myc_link];
             end;
-            DrawFrame(Yoghurt.frames[Pred(currentframe)], FormSketchpad.pad.canvas,false,false,c,c,c2,MyOtherColors[myoc_help]);
-            //if miShowLinks.Checked and (CurrentFrame>0) then DrawLinks(myf,yoghurt.frames[currentframe-1],FormSketchpad.pad.canvas,c3);
+            DrawFrame(FFile.frames[Pred(currentframe)], FormSketchpad.pad.canvas,false,false,c,c,c2,MyOtherColors[myoc_help]);
+            //if miShowLinks.Checked and (CurrentFrame>0) then DrawLinks(myf,FFile.frames[currentframe-1],FormSketchpad.pad.canvas,c3);
             //### nach den nächsten frame setzen
          end;
          if ((myf.Bits and 1)=0) then begin
@@ -1235,9 +1235,9 @@ begin
          DrawFrame(myf,FormSketchpad.pad.canvas,miShowReal.Checked,true,c,c2,c3,MyOtherColors[myoc_help]);
          //### test von oben
          if (currentframe>0) and (miShowBackframe.Checked) and (miShowLinks.Checked) then begin
-            if ((Yoghurt.frames[Pred(currentframe)].Bits and 1)=0) then
+            if ((FFile.frames[Pred(currentframe)].Bits and 1)=0) then
                c3 := MyColors[0,myc_link] else c3 := MyColors[1,myc_link];
-            DrawLinks(myf,Yoghurt.frames[Pred(currentframe)],FormSketchpad.pad.canvas,c3);
+            DrawLinks(myf,FFile.frames[Pred(currentframe)],FormSketchpad.pad.canvas,c3);
          end;
       end;
       Drawing := false;
@@ -1250,7 +1250,7 @@ var i: integer;
     myp: TSmallPoint;
     myf: TLaserFrame;
 begin
-   myf := Yoghurt.Frames[currentframe];
+   myf := FFile.Frames[currentframe];
    for i := 0 to Pred(myf.Points.Count) do begin
       myp := myf.Points[i];
       myp.Caption := IntToStr(i);
@@ -1263,7 +1263,7 @@ var i: integer;
     s: string;
     reg: TRegistry;
 begin
-   Yoghurt := TLaserFrames.Create;
+   FFile := TLaserFrames.Create;
    msLivePreview := TMemoryStream.Create;
    Undo.Op := sNone;
    ZoomFactor := 2;
@@ -1866,7 +1866,7 @@ procedure TFormMain.iThumbsMouseUp(Sender: TObject; Button: TMouseButton;
 var sel: word;
 begin
    sel := y div 33;
-   if sel < Yoghurt.count then begin
+   if sel < FFile.count then begin
       if sel <= FormSketchpad.sbFrames.Max then begin
          FormSketchpad.sbFrames.Position := sel;
          FormSketchpad.sbFramesChange(nil);
@@ -1876,31 +1876,31 @@ end;
 
 procedure TFormMain.miLastfile0Click(Sender: TObject);
 begin
-   LoadFromFile(Copy(miLastfile0.Caption,4,Length(miLastfile0.Caption)-3),Yoghurt,true);
+   LoadFromFile(Copy(miLastfile0.Caption,4,Length(miLastfile0.Caption)-3),FFile,true);
    Redraw;
 end;
 
 procedure TFormMain.miLastfile1Click(Sender: TObject);
 begin
-   LoadFromFile(Copy(miLastfile1.Caption,4,Length(miLastfile1.Caption)-3),Yoghurt,true);
+   LoadFromFile(Copy(miLastfile1.Caption,4,Length(miLastfile1.Caption)-3),FFile,true);
    Redraw;
 end;
 
 procedure TFormMain.miLastfile2Click(Sender: TObject);
 begin
-   LoadFromFile(Copy(miLastfile2.Caption,4,Length(miLastfile2.Caption)-3),Yoghurt,true);
+   LoadFromFile(Copy(miLastfile2.Caption,4,Length(miLastfile2.Caption)-3),FFile,true);
    Redraw;
 end;
 
 procedure TFormMain.miLastfile3Click(Sender: TObject);
 begin
-   LoadFromFile(Copy(miLastfile3.Caption,4,Length(miLastfile3.Caption)-3),Yoghurt,true);
+   LoadFromFile(Copy(miLastfile3.Caption,4,Length(miLastfile3.Caption)-3),FFile,true);
    Redraw;
 end;
 
 procedure TFormMain.milastfile4Click(Sender: TObject);
 begin
-   LoadFromFile(Copy(miLastfile4.Caption,4,Length(miLastfile4.Caption)-3),Yoghurt,true);
+   LoadFromFile(Copy(miLastfile4.Caption,4,Length(miLastfile4.Caption)-3),FFile,true);
    Redraw;
 end;
 
@@ -1910,7 +1910,7 @@ var c: TColor;
     s,s2: string;
     //p1,ps,p2: TPoint;
 begin
-   if Yoghurt<>nil then if index<Yoghurt.count then with (Control as TListBox).Canvas do begin
+   if FFile<>nil then if index<FFile.count then with (Control as TListBox).Canvas do begin
       Brush.Color := MyOtherColors[myoc_bg];
       FillRect(Rect);
       Pen.Color := clGreen;
@@ -1921,13 +1921,13 @@ begin
       end;
       Pen.Style := psSolid;
       //MoveTo(Rect.Left,Rect.Bottom-1); LineTo(Rect.Right,Rect.Bottom-1);
-      if ((Yoghurt.frames[index].Bits and 1)=0) then
+      if ((FFile.frames[index].Bits and 1)=0) then
         c := MyColors[0,myc_norm] else c := MyColors[1,myc_norm];
-      FormMain.DrawThumb(Yoghurt.frames[index],(Control as TListBox).Canvas,
+      FormMain.DrawThumb(FFile.frames[index],(Control as TListBox).Canvas,
                       Rect.Left,Rect.Top+18,4,c);
       // sperrsymbol
       //..
-      if (Yoghurt.frames[index].Bits and 2)=2 then begin
+      if (FFile.frames[index].Bits and 2)=2 then begin
          Font.Color := clRed;
          s := 'Locked';
          TextOut(Rect.Right-2-TextWidth(s),Rect.Top+2,s);
@@ -1935,15 +1935,15 @@ begin
       // und texte
       Font.Color := MyTextColors[mytc_thumb];
       Pen.Color := clGreen;
-      TextOut(Rect.Left+2,Rect.Top+2,Yoghurt.frames[index].FrameName);
+      TextOut(Rect.Left+2,Rect.Top+2,FFile.frames[index].FrameName);
       TextOut(Rect.Left+66,Rect.Top+20,'Delay:');
-      s := IntToStr(Yoghurt.frames[index].Delay);
+      s := IntToStr(FFile.frames[index].Delay);
       TextOut(Rect.Right-6-TextWidth(s),Rect.Top+20,s);
       TextOut(Rect.Left+66,Rect.Top+34,'Morph:');
-      s := IntToStr(Yoghurt.frames[index].Morph);
+      s := IntToStr(FFile.frames[index].Morph);
       TextOut(Rect.Right-6-TextWidth(s),Rect.Top+34,s);
       TextOut(Rect.Left+66,Rect.Top+48,'Effect:');
-      case Yoghurt.frames[index].Effect of
+      case FFile.frames[index].Effect of
          effect_slide    : s := 'Slide';
          effect_morph    : s := 'Morph';
          effect_plode    : s := '-plode';
@@ -1956,15 +1956,15 @@ begin
       end;
       TextOut(Rect.Right-6-TextWidth(s),Rect.Top+48,s);
       //TextOut(Rect.Left+66,Rect.Top+62,'Color:');
-      //if ((Tframe(yoghurt.frames[index]).bits and 1)=0) then s := MyColorNames[0]
+      //if ((Tframe(FFile.frames[index]).bits and 1)=0) then s := MyColorNames[0]
       //else s := MyColorNames[1];
       //if Pos('&',s)>0 then Delete(s,Pos('&',s),1);
       //TextOut(Rect.Right-6-TextWidth(s),Rect.Top+62,s);
-      if Yoghurt.frames[index].Effect in [effect_rotate,effect_drain,effect_xflip,effect_yflip,effect_dflip,effect_plode] then begin
-         case Yoghurt.frames[index].Effect of
-            effect_rotate,effect_drain: begin s := 'Rotation:'; s2 := IntToStr(Yoghurt.frames[index].EffectParam)+'°'; end;
-            effect_xflip,effect_yflip,effect_dflip,effect_plode: begin s := 'Rotation:'; if Yoghurt.frames[index].EffectParam = 1 then s2 := 'Trig' else s2 := 'Lin'; end;
-            else begin s := 'Param:'; s2 := IntToStr(Yoghurt.frames[index].EffectParam)+'°'; end;
+      if FFile.frames[index].Effect in [effect_rotate,effect_drain,effect_xflip,effect_yflip,effect_dflip,effect_plode] then begin
+         case FFile.frames[index].Effect of
+            effect_rotate,effect_drain: begin s := 'Rotation:'; s2 := IntToStr(FFile.frames[index].EffectParam)+'°'; end;
+            effect_xflip,effect_yflip,effect_dflip,effect_plode: begin s := 'Rotation:'; if FFile.frames[index].EffectParam = 1 then s2 := 'Trig' else s2 := 'Lin'; end;
+            else begin s := 'Param:'; s2 := IntToStr(FFile.frames[index].EffectParam)+'°'; end;
          end;
          TextOut(Rect.Left+66,Rect.Top+62,s);
          TextOut(Rect.Right-6-TextWidth(s2),Rect.Top+62,s2);
@@ -1974,7 +1974,7 @@ end;
 
 procedure TFormMain.lbThumbsClick(Sender: TObject);
 begin
-   if (lbThumbs.ItemIndex>-1) and (lbThumbs.ItemIndex<Yoghurt.count) then begin
+   if (lbThumbs.ItemIndex>-1) and (lbThumbs.ItemIndex<FFile.count) then begin
       FormSketchpad.sbFrames.Position := lbThumbs.ItemIndex;
       FormSketchpad.sbFramesChange(nil);
    end;
@@ -2189,7 +2189,7 @@ procedure TFormMain.miColor0Click(Sender: TObject);
 var myf: TLaserFrame;
 begin
    FileChanged := true;
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    if (myf.Bits and 1)=1 then Dec(myf.Bits);
    //if (myf.bits and 1)=0 then Inc(myf.bits);
    lbThumbs.Refresh;
@@ -2201,7 +2201,7 @@ procedure TFormMain.miColor1Click(Sender: TObject);
 var myf: TLaserFrame;
 begin
    FileChanged := true;
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    //if (myf.bits and 1)=1 then Dec(myf.bits);
    if (myf.Bits and 1)=0 then Inc(myf.Bits);
    lbThumbs.Refresh;
@@ -2213,7 +2213,7 @@ procedure TFormMain.miEffectSlideClick(Sender: TObject);
 var myf: TLaserFrame;
 begin
    FileChanged := true;
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    myf.Effect := effect_slide;
    lbThumbs.Refresh;
    Redraw;
@@ -2223,7 +2223,7 @@ procedure TFormMain.miEffectMorphClick(Sender: TObject);
 var myf: TLaserFrame;
 begin
    FileChanged := true;
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    myf.Effect := effect_morph;
    lbThumbs.Refresh;
    Redraw;
@@ -2233,7 +2233,7 @@ procedure TFormMain.miEffectPlodeClick(Sender: TObject);
 var myf: TLaserFrame;
 begin
    FileChanged := true;
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    myf.Effect := effect_plode;
    lbThumbs.Refresh;
    Redraw;
@@ -2243,7 +2243,7 @@ procedure TFormMain.miEffectXFlipClick(Sender: TObject);
 var myf: TLaserFrame;
 begin
    FileChanged := true;
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    myf.Effect := effect_xflip;
    lbThumbs.Refresh;
    Redraw;
@@ -2253,7 +2253,7 @@ procedure TFormMain.miEffectYFlipClick(Sender: TObject);
 var myf: TLaserFrame;
 begin
    FileChanged := true;
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    myf.Effect := effect_yflip;
    lbThumbs.Refresh;
    Redraw;
@@ -2265,8 +2265,8 @@ var was: integer;
 begin
    if (Button=mbLeft) then begin
       was := lbThumbs.ItemAtPos(Point(x,y),false);
-      if (was>-1) and (was<Yoghurt.count) then begin
-         if (Yoghurt.frames[was].Bits and 2)=0 then lbThumbs.BeginDrag(false,5);
+      if (was>-1) and (was<FFile.count) then begin
+         if (FFile.frames[was].Bits and 2)=0 then lbThumbs.BeginDrag(false,5);
       end;
    end;
 end;
@@ -2293,34 +2293,34 @@ begin
       iSelectedFrame := lbThumbs.ItemIndex;
       if (iTargetFrame>-1) and (iSelectedFrame>-1) then begin
          //FormSketchpad.Caption := 'Dragging '+IntToStr(was)+' B4: '+IntToStr(wo);
-         myf := Yoghurt.frames[iSelectedFrame];
+         myf := FFile.frames[iSelectedFrame];
          if myf.Effect=1 then
          doit := (MessageDlg('Do you really want to move this frame? The link matrix will be corrupted after this!',
                   mtWarning,[mbYes,mbNo],0)=mrYes)
          else doit := true;
          if doit then begin
-            if (iSelectedFrame<(Pred(Yoghurt.Count))) then begin
-               mynf := Yoghurt.frames[iSelectedFrame+1];
+            if (iSelectedFrame<(Pred(FFile.Count))) then begin
+               mynf := FFile.frames[iSelectedFrame+1];
                if iSelectedFrame>0 then begin
-                  mypf := Yoghurt.frames[Pred(iSelectedFrame)];
+                  mypf := FFile.frames[Pred(iSelectedFrame)];
                   SetLength(mynf.links,mynf.Points.count,mypf.Points.count);
                end else begin
                   SetLength(mynf.links,mynf.Points.count,0);
                end;
             end;
-            Yoghurt.Delete(iSelectedFrame);
-            if iTargetFrame>Yoghurt.count then begin
-               neupos := Yoghurt.Add(myf);
+            FFile.Delete(iSelectedFrame);
+            if iTargetFrame>FFile.count then begin
+               neupos := FFile.Add(myf);
             end else begin
-               Yoghurt.Insert(iTargetFrame, myf);
+               FFile.Insert(iTargetFrame, myf);
                neupos := iTargetFrame;
             end;
-            if neupos<(Pred(Yoghurt.count)) then begin
-               mynf := Yoghurt.frames[neupos+1];
+            if neupos<(Pred(FFile.count)) then begin
+               mynf := FFile.frames[neupos+1];
                SetLength(mynf.links,mynf.Points.count,myf.Points.count);
             end;
             if neupos>0 then begin
-               mypf := Yoghurt.frames[Pred(neupos)];
+               mypf := FFile.frames[Pred(neupos)];
                SetLength(myf.links,myf.Points.count,mypf.Points.count);
             end else begin
                SetLength(myf.links,myf.Points.count,0);
@@ -2419,7 +2419,7 @@ begin
    doit := (MessageDlg('Do you really want to discard any changes made to this file?',
                  mtConfirmation,[mbYes,mbNo],0)=mrYes);
    if doit then begin
-      Yoghurt.Clear;
+      FFile.Clear;
       myf := TLaserFrame.Create;
       FormSketchpad.sbFrames.Position := 0;
       FormSketchpad.sbFrames.Max := 0;
@@ -2428,8 +2428,8 @@ begin
       FormSketchpad.Caption := 'new file';
       FormSketchpad.Parent:=Self;
       FormSketchpad.Align:=alClient;
-      Yoghurt.Filename := '';
-      Yoghurt.Add(myf);
+      FFile.Filename := '';
+      FFile.Add(myf);
       lbThumbs.Items.Clear;
       lbThumbs.Items.Add('');
    end;
@@ -2446,7 +2446,7 @@ begin
    odLC1.Filename := '';
    if doit then if odLC1.Execute then begin
       odLC1.InitialDir := ExtractFilePath(odLC1.Filename);
-      LoadFromFile(odLC1.Filename,Yoghurt,true);
+      LoadFromFile(odLC1.Filename,FFile,true);
       AddUsedFile(odLC1.Filename);
       FileChanged := false;
       Redraw;
@@ -2455,19 +2455,19 @@ end;
 
 procedure TFormMain.aSaveFileExecute(Sender: TObject);
 begin
-   if FileExistsUTF8(Yoghurt.Filename) { *Converted from FileExists* } then SaveToFile(Yoghurt.Filename,Yoghurt)
+   if FileExistsUTF8(FFile.Filename) { *Converted from FileExists* } then SaveToFile(FFile.Filename,FFile)
    else aSaveAsFileExecute(Sender);
    FileChanged := false;
 end;
 
 procedure TFormMain.aSaveAsFileExecute(Sender: TObject);
 begin
-   sdLC1.Filename := Yoghurt.Filename;
+   sdLC1.Filename := FFile.Filename;
    if sdLC1.Execute then begin
       sdLC1.InitialDir := ExtractFilePath(sdLC1.Filename);
-      SaveToFile(sdLC1.filename,Yoghurt);
+      SaveToFile(sdLC1.filename,FFile);
       AddUsedFile(sdLC1.Filename);
-      Yoghurt.Filename := sdLC1.filename;
+      FFile.Filename := sdLC1.filename;
       FileChanged := false;
    end;
 end;
@@ -2476,14 +2476,14 @@ procedure TFormMain.InsertFrame(f: TLaserFrame; pos: integer);
 var myf, mynf: TLaserFrame;
 begin
    myf := f;
-   mynf := FormMain.Yoghurt.frames[pos];
+   mynf := FormMain.FFile.frames[pos];
    if pos>0 then
-      SetLength(myf.links,myf.Points.count,TLaserFrame(Yoghurt.frames[Pred(pos)]).Points.count)
+      SetLength(myf.links,myf.Points.count,TLaserFrame(FFile.frames[Pred(pos)]).Points.count)
    else
       SetLength(myf.links,myf.Points.count,0);
    SetLength(mynf.links,mynf.Points.count,myf.Points.count);
-   Yoghurt.Insert(pos,myf);
-   lbThumbs.Items.Insert(CurrentFrame,Yoghurt.frames[Pred(Yoghurt.Count)].FrameName);
+   FFile.Insert(pos,myf);
+   lbThumbs.Items.Insert(CurrentFrame,FFile.frames[Pred(FFile.Count)].FrameName);
    FormSketchpad.sbFrames.Max := FormSketchpad.sbFrames.Max + 1;
    FormSketchpad.sbFramesChange(nil);
    lbThumbs.Refresh;
@@ -2494,23 +2494,23 @@ procedure TFormMain.DeleteFrame(pos: integer; var f: TLaserFrame);
 var mynf,mypf: TLaserFrame;
 begin
    filechanged := true;
-   if Yoghurt<>nil then if Yoghurt.Count>0 then begin
-      if Yoghurt.Count>1 then begin
-         if (pos<Pred(Yoghurt.Count)) then begin
-            mynf := Yoghurt.frames[pos+1];
+   if FFile<>nil then if FFile.Count>0 then begin
+      if FFile.Count>1 then begin
+         if (pos<Pred(FFile.Count)) then begin
+            mynf := FFile.frames[pos+1];
             if (pos=0) then begin
                SetLength(mynf.links,mynf.Points.count,0);
             end else begin
-               mypf := Yoghurt.frames[Pred(pos)];
+               mypf := FFile.frames[Pred(pos)];
                SetLength(mynf.links,mynf.Points.count,mypf.Points.count);
             end;
          end;
-         f := Yoghurt.frames[pos];
-         Yoghurt.Delete(pos);
+         f := FFile.frames[pos];
+         FFile.Delete(pos);
          lbThumbs.Items.Delete(pos);
          if pos>0 then Dec(pos);
          FormSketchpad.panelFrameSwitcher.Caption := IntToStr(pos);
-         FormSketchpad.sbFrames.Max := Pred(Yoghurt.Count);
+         FormSketchpad.sbFrames.Max := Pred(FFile.Count);
          FormSketchpad.sbFramesChange(nil);
       end else MessageDlg('You can''t delete the one and only frame!',mtError,[mbOK],0);
    end;
@@ -2527,8 +2527,8 @@ begin
    FormImport.lb.Items.Clear;
    if FormImport.ShowModal=mrOK
    then if FormImport.lb.ItemIndex>-1 then begin
-      InsertFrame(FormImport.yoghurt.frames[FormImport.lb.ItemIndex],CurrentFrame);
-      FreeAndNil(FormImport.yoghurt);
+      InsertFrame(FormImport.FFile.frames[FormImport.lb.ItemIndex],CurrentFrame);
+      FreeAndNil(FormImport.FFile);
    end;
 end;
 
@@ -2546,11 +2546,11 @@ begin
             then for i := Pred(y2.Count) downto 0 do begin
                myf := y2.frames[i];
                if CurrentFrame>0 then
-                  SetLength(myf.links,myf.Points.count,TLaserFrame(Yoghurt.frames[Pred(CurrentFrame)]).Points.count)
+                  SetLength(myf.links,myf.Points.count,TLaserFrame(FFile.frames[Pred(CurrentFrame)]).Points.count)
                else
                   SetLength(myf.links,myf.Points.count,0);
-               mynf := Yoghurt.frames[CurrentFrame];
-               Yoghurt.Insert(CurrentFrame,myf);
+               mynf := FFile.frames[CurrentFrame];
+               FFile.Insert(CurrentFrame,myf);
                SetLength(mynf.links,mynf.Points.count,myf.Points.count);
                lbThumbs.Items.Insert(CurrentFrame,myf.FrameName);
                FormSketchpad.sbFrames.Max := FormSketchpad.sbFrames.Max + 1;
@@ -2659,8 +2659,6 @@ begin
    miShowPoints.Checked := not miShowPoints.Checked;
    sbShowPoints.Down := miShowPoints.Checked;
    Redraw;
-
-
 end;
 
 procedure TFormMain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -2675,7 +2673,7 @@ procedure TFormMain.sbEffectClick(Sender: TObject);
 var myf: TLaserFrame;
 begin
    FileChanged := true;
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    Inc(myf.Effect);
    if myf.Effect>7 then myf.Effect := 0;
    case myf.Effect of
@@ -2695,16 +2693,16 @@ end;
 procedure TFormMain.aAddFrameExecute(Sender: TObject);
 var myf: TLaserFrame;
 begin
-   myf := Yoghurt.Add;
+   myf := FFile.Add;
    lbThumbs.Items.Add('');
-   FormSketchpad.sbFrames.Max := Pred(Yoghurt.Count);
+   FormSketchpad.sbFrames.Max := Pred(FFile.Count);
 end;
 
 procedure TFormMain.aRenameFrameExecute(Sender: TObject);
 begin
-   if (CurrentFrame>-1) and (CurrentFrame<Yoghurt.Count) then begin
+   if (CurrentFrame>-1) and (CurrentFrame<FFile.Count) then begin
       lbThumbs.Items[CurrentFrame] := InputBox('Enter new framename','new name 4 frame',lbThumbs.Items[CurrentFrame]);
-      TLaserFrame(Yoghurt.frames[CurrentFrame]).FrameName := lbThumbs.Items[CurrentFrame];
+      TLaserFrame(FFile.frames[CurrentFrame]).FrameName := lbThumbs.Items[CurrentFrame];
    end;
    lbThumbs.Refresh;
 end;
@@ -2714,8 +2712,8 @@ var myf: TLaserFrame;
     s: string;
     i,ec: integer;
 begin
-   if (CurrentFrame>-1) and (CurrentFrame<Yoghurt.Count) then begin
-      myf := TLaserFrame(Yoghurt.frames[CurrentFrame]);
+   if (CurrentFrame>-1) and (CurrentFrame<FFile.Count) then begin
+      myf := TLaserFrame(FFile.frames[CurrentFrame]);
       s := InputBox('Enter new framedelay in ms','new delay',IntToStr(myf.Delay));
       Val(s,i,ec);
       if ec=0 then myf.Delay := i;
@@ -2728,8 +2726,8 @@ var myf: TLaserFrame;
     s: string;
     i,ec: integer;
 begin
-   if (CurrentFrame>-1) and (CurrentFrame<Yoghurt.Count) then begin
-      myf := TLaserFrame(Yoghurt.frames[CurrentFrame]);
+   if (CurrentFrame>-1) and (CurrentFrame<FFile.Count) then begin
+      myf := TLaserFrame(FFile.frames[CurrentFrame]);
       s := InputBox('Enter new morphtime in ms','new morphtime',IntToStr(myf.Morph));
       Val(s,i,ec);
       if ec=0 then myf.Morph := i;
@@ -2827,9 +2825,9 @@ var iCurrent,iPrevious,f: integer;
     dx,dy: integer;
 begin
    f := 0;
-   if Yoghurt<>nil then if Yoghurt.Count>1 then if CurrentFrame>0 then begin
-      fCurrent := Yoghurt.frames[CurrentFrame];
-      fPrevious := Yoghurt.frames[Pred(CurrentFrame)];
+   if FFile<>nil then if FFile.Count>1 then if CurrentFrame>0 then begin
+      fCurrent := FFile.frames[CurrentFrame];
+      fPrevious := FFile.frames[Pred(CurrentFrame)];
       for iCurrent := 0 to Pred(fCurrent.Points.count) do begin
          myp := fCurrent.Points[iCurrent];
          for iPrevious := 0 to Pred(fPrevious.Points.count) do begin
@@ -2860,7 +2858,7 @@ var myf: TLaserFrame;
     framedauer: word;
     wavedata: atp;
 begin
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    framedauer := 0;
    SetLength(wavedata,0);
    with FormDebug.img.canvas do begin
@@ -3088,7 +3086,7 @@ begin
    end;
    // ### special effect: morph last frame into this!!! ################
    if (Frame1.Effect=effect_morph) and (framecounter>0) and forw then begin
-      mypf := Yoghurt.frames[Pred(framecounter)];
+      mypf := FFile.frames[Pred(framecounter)];
       // ### stetig: lastpoint -> topoint
       topoint.x := TSmallPoint(mypf.Points[0]).x;
       topoint.y := TSmallPoint(mypf.Points[0]).y;
@@ -3145,8 +3143,8 @@ begin
    // ### main part ###########################################################
    iFrameDuration := 0;
    // Create Wave Header
-   s := Copy(ExtractFileName(Yoghurt.Filename),1,Length(Yoghurt.Filename)-Length(ExtractFileExt(Yoghurt.Filename)));
-   s := ExtractFilePath(Yoghurt.Filename)+s+'.WAV';
+   s := Copy(ExtractFileName(FFile.Filename),1,Length(FFile.Filename)-Length(ExtractFileExt(FFile.Filename)));
+   s := ExtractFilePath(FFile.Filename)+s+'.WAV';
    if FileExistsUTF8(s) { *Converted from FileExists* } then DeleteFileUTF8(s); { *Converted from DeleteFile* }
    fs := TFileStream.Create(s,fmCreate);
    ms := TMemoryStream.Create;
@@ -3156,21 +3154,21 @@ begin
       // run frame
       iFullTime := 0;
       iTimeDone := 0;
-      for framecounter := 0 to Pred(Yoghurt.Count) do begin
-         Inc(iFullTime,TLaserFrame(Yoghurt.frames[framecounter]).Delay);
-         Inc(iFullTime,TLaserFrame(Yoghurt.frames[framecounter]).Morph);
+      for framecounter := 0 to Pred(FFile.Count) do begin
+         Inc(iFullTime,TLaserFrame(FFile.frames[framecounter]).Delay);
+         Inc(iFullTime,TLaserFrame(FFile.frames[framecounter]).Morph);
       end;
       FormStatus.pgTotal.Max := iFullTime;
       FormStatus.pgTotal.Position := 0;
-      myf := Yoghurt.frames[0];
+      myf := FFile.frames[0];
       // #### frame-loop ######################################################
       topoint.x := 128; topoint.y := 128;
       lastpoint := topoint;
       //lastpoint.x := 128; lastpoint.y := 128;
-      for framecounter := 0 to Pred(Yoghurt.Count) do begin
-         myf := Yoghurt.frames[framecounter];
+      for framecounter := 0 to Pred(FFile.Count) do begin
+         myf := FFile.frames[framecounter];
          if myf.Points.count>0 then begin
-            FormStatus.labelFrame.Caption := myf.FrameName + '   ('+IntToStr(framecounter+1)+'/'+IntToStr(Yoghurt.Count)+')';
+            FormStatus.labelFrame.Caption := myf.FrameName + '   ('+IntToStr(framecounter+1)+'/'+IntToStr(FFile.Count)+')';
             FormStatus.Repaint;
             iFrameDuration := 0;
             SetLength(wavedata,0); SetLength(waveblank,0);
@@ -3199,8 +3197,8 @@ begin
             lastpoint.y := wavedata[Pred(Length(wavedata))].y;
             Inc(iTimeDone,myf.Delay);
             // ### write effects-part of next frame ##############################
-            if framecounter < Pred(Yoghurt.Count) then begin
-               mynf := Yoghurt.frames[framecounter+1];
+            if framecounter < Pred(FFile.Count) then begin
+               mynf := FFile.frames[framecounter+1];
                iMorphSamples := Round(44100*mynf.Morph/(1000*iFrameDuration));
                case mynf.Effect of
                   effect_xflip,effect_yflip,effect_plode,effect_drain: begin
@@ -3250,9 +3248,9 @@ var iPrevious,iCurrent,f: integer;
     fCurrent,fPrevious: TLaserFrame;
 begin
    f := 0;
-   if Yoghurt<>nil then if Yoghurt.Count>1 then if fi>0 then begin
-      fCurrent := Yoghurt.frames[fi];
-      fPrevious := Yoghurt.frames[Pred(fi)];
+   if FFile<>nil then if FFile.Count>1 then if fi>0 then begin
+      fCurrent := FFile.frames[fi];
+      fPrevious := FFile.frames[Pred(fi)];
       for iPrevious := 0 to Pred(fPrevious.Points.Count) do begin
          f := 0;
          for iCurrent := 0 to Pred(fCurrent.Points.count) do begin
@@ -3283,8 +3281,8 @@ var i: integer;
     s: string;
 begin
    s := '';
-   if Yoghurt<>nil then if Yoghurt.Count>1 then begin
-      for i := 1 to Pred(Yoghurt.Count) do
+   if FFile<>nil then if FFile.Count>1 then begin
+      for i := 1 to Pred(FFile.Count) do
         CheckFrameLinks(i,s);
    end;
    if s = ''
@@ -3418,13 +3416,13 @@ end;
 procedure TFormMain.aLoadBackImgExecute(Sender: TObject);
 var myf: TLaserFrame;
 begin
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    if odBitmap.Execute then begin
       if FileExistsUTF8(odBitmap.Filename) { *Converted from FileExists* } then begin
          if myf.Bitmap=nil then myf.Bitmap := TBitmap.Create;
          myf.Bitmap.LoadFromFile(odBitmap.Filename);
          aLoadBackImg.Caption := 'Background image: '+ExtractFileName(odBitmap.Filename);
-         myf := Yoghurt.frames[currentframe];
+         myf := FFile.frames[currentframe];
          myf.ImgName := odBitmap.filename;
          ReDraw;
          miFullImg.Enabled := true;
@@ -3439,15 +3437,15 @@ end;
 procedure TFormMain.pmiChoosePartClick(Sender: TObject);
 var myf: TLaserFrame;
 begin
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    if myf.Bitmap<>nil
     then if not myf.Bitmap.Empty
      then with FormPickImage do begin
       Img.Picture := TPicture(myf.Bitmap);
       DataImage := myf.Bitmap;
-      DataRect := TLaserFrame(Yoghurt.frames[currentframe]).ImgRect;
+      DataRect := TLaserFrame(FFile.frames[currentframe]).ImgRect;
       ShowModal;
-      TLaserFrame(Yoghurt.frames[currentframe]).ImgRect := DataRect;
+      TLaserFrame(FFile.frames[currentframe]).ImgRect := DataRect;
       miPartImg.Checked := true;
    end;
    sbPartImgClick(Sender);
@@ -3456,15 +3454,15 @@ end;
 procedure TFormMain.aChooseImgPartExecute(Sender: TObject);
 var myf: TLaserFrame;
 begin
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    if myf.Bitmap<>nil
     then if not myf.Bitmap.Empty
      then with FormPickImage do begin
       Img.Picture := TPicture(myf.Bitmap);
       DataImage := myf.Bitmap;
-      DataRect := TLaserFrame(Yoghurt.frames[currentframe]).ImgRect;
+      DataRect := TLaserFrame(FFile.frames[currentframe]).ImgRect;
       ShowModal;
-      TLaserFrame(Yoghurt.frames[currentframe]).ImgRect := DataRect;
+      TLaserFrame(FFile.frames[currentframe]).ImgRect := DataRect;
       miPartImg.Checked := true;
    end;
    sbPartImgClick(Sender);
@@ -3486,18 +3484,18 @@ end;
 
 procedure TFormMain.miHelpLinesClick(Sender: TObject);
 begin
-   if not Assigned(Yoghurt)
+   if not Assigned(FFile)
     then Exit;
-   if Yoghurt.Count=0
+   if FFile.Count=0
     then Exit;
-   FormHelpLines.Execute(TLaserFrame(Yoghurt.Frames[CurrentFrame]).HelpLines);
+   FormHelpLines.Execute(TLaserFrame(FFile.Frames[CurrentFrame]).HelpLines);
 end;
 
 procedure TFormMain.tbPlayClick(Sender: TObject);
 begin
-   if Yoghurt<>nil then begin
-      if FileExistsUTF8(Yoghurt.Filename+'.WAV') { *Converted from FileExists* } then begin
-         {mpPreview.Filename := Yoghurt.Filename+'.WAV';
+   if FFile<>nil then begin
+      if FileExistsUTF8(FFile.Filename+'.WAV') { *Converted from FileExists* } then begin
+         {mpPreview.Filename := FFile.Filename+'.WAV';
          mpPreview.Notify := false;
          mpPreview.Open;
          mpPreview.Notify := true;
@@ -3551,7 +3549,7 @@ procedure TFormMain.miEffectRotateClick(Sender: TObject);
 var myf: TLaserFrame;
 begin
    FileChanged := true;
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    myf.Effect := effect_rotate;
    lbThumbs.Refresh;
    Redraw;
@@ -3569,7 +3567,7 @@ var mya: atp;
 begin
    ok := true;
    if tbLive.Down then begin
-      myf := Yoghurt.frames[CurrentFrame];
+      myf := FFile.frames[CurrentFrame];
       SetLength(mya,0); SetLength(myb,0);
       if myf.Points.count>2 then begin
          //PlaySound(nil, 0, SND_MEMORY  or SND_ASYNC or SND_LOOP);
@@ -3598,7 +3596,7 @@ var myf: TLaserFrame;
     myp: TSmallPoint;
     i: integer;
 begin
-   myf := Yoghurt.frames[CurrentFrame];
+   myf := FFile.frames[CurrentFrame];
    for i := 0 to Pred(myf.Points.count) do begin
       myp := myf.Points[i];
       myp.x := 255 - myp.x;
@@ -3611,7 +3609,7 @@ var myf: TLaserFrame;
     myp: TSmallPoint;
     i: integer;
 begin
-   myf := Yoghurt.frames[CurrentFrame];
+   myf := FFile.frames[CurrentFrame];
    for i := 0 to Pred(myf.Points.count) do begin
       myp := myf.Points[i];
       myp.y := 255 - myp.y;
@@ -3624,8 +3622,8 @@ var myf: TLaserFrame;
     s: string;
     i,ec: integer;
 begin
-   if (CurrentFrame>-1) and (CurrentFrame<Yoghurt.Count) then begin
-      myf := TLaserFrame(Yoghurt.frames[CurrentFrame]);
+   if (CurrentFrame>-1) and (CurrentFrame<FFile.Count) then begin
+      myf := TLaserFrame(FFile.frames[CurrentFrame]);
       s := InputBox('Enter new effect parameter','new effect parameter',IntToStr(myf.EffectParam));
       Val(s,i,ec);
       if ec=0 then begin
@@ -3645,7 +3643,7 @@ procedure TFormMain.miEffectDFlipClick(Sender: TObject);
 var myf: TLaserFrame;
 begin
    FileChanged := true;
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    myf.Effect := effect_dflip;
    lbThumbs.Refresh;
    Redraw;
@@ -3656,8 +3654,8 @@ var myf: TLaserFrame;
     s,s2: string;
     i,ec: integer;
 begin
-   if (CurrentFrame>-1) and (CurrentFrame<Yoghurt.Count) then begin
-      myf := TLaserFrame(Yoghurt.frames[CurrentFrame]);
+   if (CurrentFrame>-1) and (CurrentFrame<FFile.Count) then begin
+      myf := TLaserFrame(FFile.frames[CurrentFrame]);
       if myf.Effect in [effect_xflip,effect_yflip,effect_dflip,effect_plode] then
          s2 := 'Enter 0 for linear, 1 for trigonometric effect progression'
          else s2 := 'Enter new effect parameter';
@@ -3688,7 +3686,7 @@ end;
 procedure TFormMain.miUndoClick(Sender: TObject);
 var myf: TLaserFrame;
 begin
-   myf := Yoghurt.frames[CurrentFrame];
+   myf := FFile.frames[CurrentFrame];
    case Undo.Op of
       sAdd: begin
          myf.Points.delete(Undo.Pos);
@@ -3707,11 +3705,11 @@ end;
 
 procedure TFormMain.aShowPreviewExecute(Sender: TObject);
 begin
-   if FileExistsUTF8(Yoghurt.Filename+'.WAV') { *Converted from FileExists* } then begin
+   if FileExistsUTF8(FFile.Filename+'.WAV') { *Converted from FileExists* } then begin
       with FormPreview do begin
          Caption := 'Preview loading...';
          DataStream := TMemoryStream.Create;
-         DataStream.LoadFromFile(Yoghurt.Filename+'.WAV');
+         DataStream.LoadFromFile(FFile.Filename+'.WAV');
          Caption := 'Preview loaded...';
          tbPreviewPos.Min := 40;
          tbPreviewPos.Max := DataStream.Size;
@@ -3761,8 +3759,8 @@ var myf: TLaserFrame;
     w,ec: integer;
     winkel: real;
 begin
-   if (CurrentFrame>-1) and (CurrentFrame<Yoghurt.Count) then begin
-      myf := TLaserFrame(Yoghurt.frames[CurrentFrame]);
+   if (CurrentFrame>-1) and (CurrentFrame<FFile.Count) then begin
+      myf := TLaserFrame(FFile.frames[CurrentFrame]);
       s := InputBox('Enter rotation in degrees','rotate frame','0');
       Val(s,w,ec);
       winkel := -w/180*Pi;
@@ -3779,8 +3777,8 @@ var myf: TLaserFrame;
     sx,sy: string;
     wx,wy,ecx,ecy: integer;
 begin
-   if (CurrentFrame>-1) and (CurrentFrame<Yoghurt.Count) then begin
-      myf := TLaserFrame(Yoghurt.frames[CurrentFrame]);
+   if (CurrentFrame>-1) and (CurrentFrame<FFile.Count) then begin
+      myf := TLaserFrame(FFile.frames[CurrentFrame]);
       sx := InputBox('Enter new effect center point (x)','effect center',IntToStr(myf.RotCenter.x));
       sy := InputBox('Enter new effect center point (y)','effect center',IntToStr(myf.RotCenter.y));
       Val(sx,wx,ecx); if wx<0 then ecx := 1; if wx>255 then ecx := 1;
@@ -3806,7 +3804,7 @@ procedure TFormMain.aCopyFrameToClipboardExecute(Sender: TObject);
 var myf: TLaserFrame;
 begin
    ClipBoardFrame := TLaserFrame.Create;
-   myf := Yoghurt.frames[CurrentFrame];
+   myf := FFile.frames[CurrentFrame];
    ClipBoardFrame.Assign(myf);
    aPasteFrameFromClipboard.Enabled := true;
 end;
@@ -3876,7 +3874,7 @@ var myf: TLaserFrame;
     i: integer;
 begin
    FileChanged := true;
-   myf := Yoghurt.frames[currentframe];
+   myf := FFile.frames[currentframe];
    if FormSketchpad.MultiSelect then begin
       for i := 0 to Pred(myf.Points.Count) do begin
          myp := myf.Points[i];
@@ -3897,7 +3895,7 @@ var myf: TLaserFrame;
     i: integer;
 begin
    FileChanged := true;
-   myf := Yoghurt.frames[currentframe];
+   myf := FFile.frames[currentframe];
    if FormSketchpad.MultiSelect then begin
       for i := 0 to Pred(myf.Points.Count) do begin
          myp := myf.Points[i];
@@ -3929,7 +3927,7 @@ procedure TFormMain.sbLockClick(Sender: TObject);
 var myf: TLaserFrame;
 begin
    FileChanged := true;
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    if (myf.Bits and 2)=0 then Inc(myf.Bits,2) else Dec(myf.Bits,2);
    sbLock.Down := ((myf.Bits and 2)=2);
    lbThumbs.Refresh;
@@ -3941,7 +3939,7 @@ procedure TFormMain.miEffectDrainClick(Sender: TObject);
 var myf: TLaserFrame;
 begin
    FileChanged := true;
-   myf := Yoghurt.frames[Currentframe];
+   myf := FFile.frames[Currentframe];
    myf.Effect := effect_drain;
    lbThumbs.Refresh;
    Redraw;
@@ -3960,7 +3958,7 @@ var point1,point2, dp, erg: TPoint;
     fCurrentFrame: TLaserFrame;
     spCurrentPoint: TSmallPoint;
 begin
-   fCurrentFrame := Yoghurt.frames[CurrentFrame];
+   fCurrentFrame := FFile.frames[CurrentFrame];
    if fCurrentFrame<>nil then if fCurrentFrame.Points.count>0 then begin
       FileChanged := true;
       point1 := fCurrentFrame.AuxCenter;
@@ -3995,7 +3993,7 @@ var myf: TLaserFrame;
     i: integer;
     br: real;
 begin
-   myf := Yoghurt.frames[CurrentFrame];
+   myf := FFile.frames[CurrentFrame];
    a := myf.RotCenter;
    b.x := myf.RotCenter.x-myf.AuxCenter.x;
    b.y := myf.RotCenter.y-myf.AuxCenter.y;
@@ -4022,8 +4020,8 @@ procedure TFormMain.lbTimelineMeasureItem(Control: TWinControl;
   Index: Integer; var Height: Integer);
 var myf: TLaserFrame;
 begin
-   if (Index>-1) and (Index<Yoghurt.Count) then begin
-      myf := Yoghurt.frames[Index];
+   if (Index>-1) and (Index<FFile.Count) then begin
+      myf := FFile.frames[Index];
       Height := (myf.Delay+myf.Morph) div 10;
    end else Height := 20;
 end;
@@ -4037,7 +4035,7 @@ var p,ap: TPoint;
     ec: integer;
     r: real;
 begin
-   myf := Yoghurt.frames[CurrentFrame];
+   myf := FFile.frames[CurrentFrame];
    if myf<>nil then if myf.Points.count>0 then begin
       s := InputBox('Enter scale factor (1=100%)','scale frame','1');
       Val(s,r,ec);
@@ -4076,8 +4074,8 @@ var fCurrent,fPrevious: TLaserFrame;
     x,y: integer;
     s: string;
 begin
-   if (Yoghurt<>nil) then if (Yoghurt.Count>0) and (currentframe<Yoghurt.Count) then begin
-      fCurrent := Yoghurt.Frames[currentframe];
+   if (FFile<>nil) then if (FFile.Count>0) and (currentframe<FFile.Count) then begin
+      fCurrent := FFile.Frames[currentframe];
       // abfragen
       sides := EquilateralSides;
       s := IntToStr(sides);
@@ -4105,7 +4103,7 @@ begin
       end;
       RenumberList;
       if CurrentFrame>0 then begin
-         fPrevious := Yoghurt.frames[Pred(CurrentFrame)];
+         fPrevious := FFile.frames[Pred(CurrentFrame)];
          SetLength(fCurrent.links,fCurrent.Points.count,fPrevious.Points.count);
       end;
    end;
@@ -4135,7 +4133,7 @@ var iFrame: integer;
     r: real;
     aPoints: array[1..6] of TPoint;
 begin
-   if Yoghurt<>nil then if Yoghurt.Count>0 then begin
+   if FFile<>nil then if FFile.Count>0 then begin
       with iTimeline.Canvas do begin
          Brush.Color := MyTimelineColors[mytlc_back];
          FillRect(ClipRect);
@@ -4144,18 +4142,18 @@ begin
       h := iTimeline.Height;
       divider := tbTimeLineZoomIn.Tag;
       iFirst := tbTimelineLeft.Tag;
-      if iFirst>=Yoghurt.Count
-       then iFirst := Pred(Yoghurt.Count);
+      if iFirst>=FFile.Count
+       then iFirst := Pred(FFile.Count);
       iMaxTime := 0;
       nulloffs := 14;
       hiddentime := 0;
       for iFrame := 0 to Pred(iFirst) do begin
-         Inc(hiddentime,TLaserFrame(Yoghurt.frames[0]).Morph);
-         Inc(hiddentime,TLaserFrame(Yoghurt.frames[0]).Delay);
+         Inc(hiddentime,TLaserFrame(FFile.frames[0]).Morph);
+         Inc(hiddentime,TLaserFrame(FFile.frames[0]).Delay);
       end;
       Inc(iMaxTime,Hiddentime);
-      for iFrame := iFirst to Pred(Yoghurt.Count) do begin
-         frameCurrent := Yoghurt.frames[iFrame];
+      for iFrame := iFirst to Pred(FFile.Count) do begin
+         frameCurrent := FFile.frames[iFrame];
          with iTimeline.Canvas do begin
             Pen.Style := psSolid;
             Pen.Width := 2;
@@ -4245,7 +4243,7 @@ end;
 
 procedure TFormMain.tbTimelineRightClick(Sender: TObject);
 begin
-   if tbTimelineLeft.Tag<Pred(Yoghurt.Count)
+   if tbTimelineLeft.Tag<Pred(FFile.Count)
     then tbTimelineLeft.Tag := tbTimelineLeft.Tag + 1;
    TimeLineRedraw;
 end;

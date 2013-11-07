@@ -104,7 +104,7 @@ begin
    if FormMain.Tag=1 then begin
       if ParamCount>0
        then if FileExistsUTF8(ParamStr(1)) { *Converted from FileExists* }
-        then FormMain.LoadFromFile(ParamStr(1),FormMain.Yoghurt,true);
+        then FormMain.LoadFromFile(ParamStr(1),FormMain.FFile,true);
       FormMain.Tag := 0;
    end;
    //FormMain.ReDraw;
@@ -174,7 +174,7 @@ var i,j: integer;
     circlefactor: integer;
     dp: TPoint;
 begin
-   myf := FormMain.Yoghurt.Frames[FormMain.currentframe];
+   myf := FormMain.FFile.Frames[FormMain.currentframe];
    if (myf.Bits and 2)=0 then begin
       circlefactor := 2; //zoomfactor
       FormMain.Dontdraw := true;
@@ -308,7 +308,7 @@ begin
                end;
                RenumberList;
                if CurrentFrame>0 then begin
-                  mytf := Yoghurt.Frames[CurrentFrame-1];
+                  mytf := FFile.Frames[CurrentFrame-1];
                   SetLength(myf.links,myf.Points.count,mytf.Points.count);
                end;
             end;
@@ -316,8 +316,8 @@ begin
          else if (WorkState=sAnim) and (Button=mbRight) and (currentframe>0) then begin
             //myp := myf.points[SelectedPoint];
             FormMain.FileChanged := true;
-            myf := FormMain.Yoghurt.Frames[FormMain.currentframe-1];
-            mytf := FormMain.Yoghurt.Frames[FormMain.currentframe];
+            myf := FormMain.FFile.Frames[FormMain.currentframe-1];
+            mytf := FormMain.FFile.Frames[FormMain.currentframe];
             found := false;
             for i := 0 to myf.Points.count-1 do if not found then begin
                myoldp := myf.Points[i];
@@ -355,7 +355,7 @@ var myf: TLaserFrame;
     winkel: real;
 begin
    with FormMain do begin
-      myf := Yoghurt.Frames[FormMain.currentframe];
+      myf := FFile.Frames[FormMain.currentframe];
       sbFrame.panels[0].Text := 'X:'+IntToStr((x+FormSketchpad.sbX.Position) div ZoomFactor)
                            + '  Y:'+IntToStr((y+FormSketchpad.sbY.Position) div ZoomFactor);
       if FormSketchpad.pad.tag = 1 then begin
@@ -441,17 +441,17 @@ begin
          if miMoveNoReDraw.Checked then Redraw;
          FormMain.FileChanged := true;
       end else if FormSketchpad.pad.tag = 2 then begin
-         myf := FormMain.Yoghurt.Frames[CurrentFrame];
+         myf := FormMain.FFile.Frames[CurrentFrame];
          wp1.x := Integer(FormMain.RotStart.x)-Integer(myf.RotCenter.x);
          wp1.y := Integer(FormMain.RotStart.y)-Integer(myf.RotCenter.y);
          wp2.x := Integer(FormMain.RotEnd.x)-Integer(myf.RotCenter.x);
          wp2.y := Integer(FormMain.RotEnd.y)-Integer(myf.RotCenter.y);
          winkel := arg(wp2.x,wp2.y)-arg(wp1.x,wp1.y);
-         FormMain.RotateFrame(FormMain.Yoghurt.Frames[CurrentFrame],winkel);
+         FormMain.RotateFrame(FormMain.FFile.Frames[CurrentFrame],winkel);
          FormMain.FileChanged := true;
          FormMain.Redraw;
       end else if FormSketchpad.pad.tag = 3 then begin
-         myf := FormMain.Yoghurt.Frames[CurrentFrame];
+         myf := FormMain.FFile.Frames[CurrentFrame];
          p1.x := Integer(FormMain.RotEnd.x)-Integer(FormMain.RotStart.x);
          p1.y := Integer(FormMain.RotEnd.y)-Integer(FormMain.RotStart.y);
          for i := 0 to myf.Points.count-1 do begin
@@ -545,28 +545,28 @@ end;
 
 procedure TFormSketchpad.sbFramesChange(Sender: TObject);
 begin
-   if FormMain.Yoghurt<>nil then if FormMain.Yoghurt.Count>0 then begin
+   if FormMain.FFile<>nil then if FormMain.FFile.Count>0 then begin
       panelFrameSwitcher.Caption := IntToStr(sbFrames.Position);
-      sbFrames.Max := Pred(FormMain.Yoghurt.Count);
-      while FormMain.lbThumbs.Items.Count>FormMain.Yoghurt.Count
+      sbFrames.Max := Pred(FormMain.FFile.Count);
+      while FormMain.lbThumbs.Items.Count>FormMain.FFile.Count
         do FormMain.lbThumbs.Items.Delete(FormMain.lbThumbs.Items.Count-1);
-      if sbFrames.Position<FormMain.Yoghurt.Count then begin
-         FormMain.miPartImg.Enabled := FileExistsUTF8(TLaserFrame(FormMain.Yoghurt.Frames[sbFrames.Position]).ImgName); { *Converted from FileExists* }
+      if sbFrames.Position<FormMain.FFile.Count then begin
+         FormMain.miPartImg.Enabled := FileExistsUTF8(TLaserFrame(FormMain.FFile.Frames[sbFrames.Position]).ImgName); { *Converted from FileExists* }
          FormMain.miFullImg.Enabled := FormMain.miPartImg.Enabled;
          FormMain.miChoosePart.Enabled := FormMain.miPartImg.Enabled;
          FormMain.sbPartImg.Enabled := FormMain.miPartImg.Enabled;
          FormMain.sbFullImg.Enabled := FormMain.miPartImg.Enabled;
-         case TLaserFrame(FormMain.Yoghurt.Frames[sbFrames.Position]).Effect of
+         case TLaserFrame(FormMain.FFile.Frames[sbFrames.Position]).Effect of
             0 : FormMain.miEffectSlide.Checked := true;
             1 : FormMain.miEffectMorph.Checked := true;
             2 : FormMain.miEffectPlode.Checked := true;
             3 : FormMain.miEffectXFlip.Checked := true;
             4 : FormMain.miEffectYFlip.Checked := true;
          end;
-         if (TLaserFrame(FormMain.Yoghurt.Frames[sbFrames.Position]).Bits and 1)=0 then
+         if (TLaserFrame(FormMain.FFile.Frames[sbFrames.Position]).Bits and 1)=0 then
            FormMain.miColor0.Checked := true
          else FormMain.miColor1.Checked := true;
-         FormMain.sbLock.Down := (TLaserFrame(FormMain.Yoghurt.Frames[sbFrames.Position]).Bits and 2)=2;
+         FormMain.sbLock.Down := (TLaserFrame(FormMain.FFile.Frames[sbFrames.Position]).Bits and 2)=2;
          FormMain.lbThumbs.ItemIndex := sbFrames.Position;
          FormMain.ReCreatePreview;
       end;
@@ -599,7 +599,7 @@ begin
       MoveTo(x-iLeftRuler.Width,0); LineTo(x-iLeftRuler.Width,pad.height);
       Pen.Style := psSolid;
    end;
-   myf := FormMain.Yoghurt.Frames[FormMain.CurrentFrame];
+   myf := FormMain.FFile.Frames[FormMain.CurrentFrame];
    myx := (((x-iLeftRuler.Width)+FormSketchpad.sbX.Position) div FormMain.ZoomFactor);
    if FormMain.miFlipY.Checked then myx := 256*FormMain.ZoomFactor-myx;
    found := -1;
@@ -633,7 +633,7 @@ var mx: integer;
     myf: TLaserFrame;
     found,i: integer;
 begin
-   myf := FormMain.Yoghurt.Frames[FormMain.CurrentFrame];
+   myf := FormMain.FFile.Frames[FormMain.CurrentFrame];
    mx := (((x-iLeftRuler.Width)+FormSketchpad.sbX.Position) div FormMain.ZoomFactor);
    if FormMain.miFlipY.Checked then mx := 256*FormMain.ZoomFactor-mx;
 
@@ -668,7 +668,7 @@ begin
       MoveTo(0,y); LineTo(pad.Width,y);
       Pen.Style := psSolid;
    end;
-   myf := FormMain.Yoghurt.Frames[FormMain.CurrentFrame];
+   myf := FormMain.FFile.Frames[FormMain.CurrentFrame];
    myy := ((y+FormSketchpad.sbY.Position) div FormMain.ZoomFactor);
    if FormMain.miFlipX.Checked then myy := 256*FormMain.ZoomFactor-myy;
    found := -1;
@@ -702,7 +702,7 @@ var my: integer;
     myf: TLaserFrame;
     found,i: integer;
 begin
-   myf := FormMain.Yoghurt.Frames[FormMain.CurrentFrame];
+   myf := FormMain.FFile.Frames[FormMain.CurrentFrame];
    my := (y+FormSketchpad.sbY.Position) div FormMain.ZoomFactor;
    if FormMain.miFlipX.Checked then my := 256*FormMain.ZoomFactor-my;
 

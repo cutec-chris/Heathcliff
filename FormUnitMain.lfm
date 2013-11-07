@@ -296,7 +296,6 @@ object FormMain: TFormMain
         OnClick = sbFlipXClick
         ParentShowHint = False
         ShowHint = True
-        Style = tbsDropDown
       end
       object sbShowPoints: TToolButton
         Left = 1
@@ -319,7 +318,6 @@ object FormMain: TFormMain
         OnClick = sbFlipYClick
         ParentShowHint = False
         ShowHint = True
-        Style = tbsDropDown
       end
       object sbShowNumPoints: TToolButton
         Left = 1
