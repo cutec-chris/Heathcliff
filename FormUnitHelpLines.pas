@@ -36,15 +36,10 @@ interface
 
 uses
    LCLIntf, LCLType, LMessages, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-   StdCtrls, Buttons, ComCtrls,
+   StdCtrls, Buttons, ComCtrls, uLaserFrames,
    UnitHeathcliffHelpers;
 
 type
-   THelpLines = class
-      x,y: array of byte;
-      d: array[0..1] of array of TPoint;
-   end;
-
    TFormHelpLines = class(TForm)
       bnAdd2P: TBitBtn;
       bnAddX: TBitBtn;

@@ -1,25 +1,25 @@
 object FormImport: TFormImport
   Left = 297
+  Height = 345
   Top = 187
+  Width = 506
   BorderStyle = bsDialog
   Caption = 'Import frame'
   ClientHeight = 345
   ClientWidth = 506
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
-  Font.Style = []
   HelpFile = 'Heathcliff.hlp'
-  Position = poMainFormCenter
   OnCreate = FormCreate
-  PixelsPerInch = 96
+  Position = poMainFormCenter
+  LCLVersion = '1.3'
   object bnImport: TBitBtn
     Left = 136
+    Height = 25
     Top = 312
     Width = 81
-    Height = 25
     Anchors = [akRight, akBottom]
     Caption = 'Import'
     Default = True
@@ -29,103 +29,106 @@ object FormImport: TFormImport
   end
   object bnCancel: TBitBtn
     Left = 223
+    Height = 25
     Top = 312
     Width = 83
-    Height = 25
     Anchors = [akRight, akBottom]
-    TabOrder = 1
     Kind = bkCancel
+    TabOrder = 1
   end
   object bnHelp: TBitBtn
     Left = 47
+    Height = 25
     Top = 312
     Width = 83
-    Height = 25
     Anchors = [akRight, akBottom]
-    TabOrder = 2
     Kind = bkHelp
+    TabOrder = 2
   end
   object labelFiletype: TStaticText
     Left = 8
+    Height = 17
     Top = 288
     Width = 49
-    Height = 17
     Caption = 'File&type:'
     FocusControl = cbFiletype
     TabOrder = 3
   end
   object cbFiletype: TComboBox
     Left = 64
+    Height = 28
     Top = 285
     Width = 242
-    Height = 21
-    Style = csDropDownList
-    Anchors = [akLeft, akTop, akRight]
-    ItemHeight = 13
-    TabOrder = 4
-    OnChange = cbFiletypeChange
+    Anchors = [akTop, akLeft, akRight]
+    ItemHeight = 0
     Items.Strings = (
       'Yoghurt files (*.LC1)'
       'All files (*.*)'
     )
+    OnChange = cbFiletypeChange
+    Style = csDropDownList
+    TabOrder = 4
   end
   object labelFilename: TStaticText
     Left = 8
+    Height = 17
     Top = 261
     Width = 55
-    Height = 17
     Caption = '&Filename:'
     FocusControl = editFilename
     TabOrder = 5
   end
   object editFilename: TEdit
     Left = 65
+    Height = 24
     Top = 258
     Width = 241
-    Height = 21
-    Anchors = [akLeft, akTop, akRight]
+    Anchors = [akTop, akLeft, akRight]
+    OnChange = editFilenameChange
     ReadOnly = True
     TabOrder = 6
-    OnChange = editFilenameChange
   end
   object labelSearchIn: TStaticText
     Left = 8
+    Height = 17
     Top = 11
     Width = 58
-    Height = 17
     Caption = '&Search in:'
     TabOrder = 7
   end
   object scbDrives: TComboBox
     Left = 66
+    Height = 27
     Top = 8
     Width = 240
-    Height = 22
+    ItemHeight = 0
     TabOrder = 8
   end
   object slvFiles: TListView
     Left = 8
+    Height = 217
     Top = 36
     Width = 298
-    Height = 217
-    Anchors = [akLeft, akTop, akRight, akBottom]
-    OnClick = slvFilesClick
-    ReadOnly = False
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Columns = <>
     HideSelection = False
     TabOrder = 9
     ViewStyle = vsReport
+    OnClick = slvFilesClick
   end
   object lb: TListBox
     Left = 312
+    Height = 345
     Top = 0
     Width = 194
-    Height = 345
-    Style = lbOwnerDrawFixed
     Align = alRight
     Color = clBlack
     ItemHeight = 68
-    TabOrder = 10
     OnClick = lbClick
     OnDrawItem = lbDrawItem
+    ScrollWidth = 192
+    Style = lbOwnerDrawFixed
+    TabOrder = 10
+    TopIndex = -1
   end
 end

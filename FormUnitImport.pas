@@ -36,7 +36,7 @@ interface
 
 uses
    LCLIntf, LCLType, LMessages, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-   StdCtrls, Buttons, ComCtrls, ShellCtrls, FileUtil,
+   StdCtrls, Buttons, ComCtrls, ShellCtrls, FileUtil, uLaserFrames,
    FormUnitMain,
    UnitHeathcliffHelpers;
 
