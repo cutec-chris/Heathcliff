@@ -96,11 +96,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitImport"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="16"/>
-        <CursorPos X="68" Y="39"/>
+        <TopLine Value="52"/>
+        <CursorPos X="37" Y="26"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -266,10 +265,11 @@
         <Filename Value="ulaserframes.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uLaserFrames"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="10"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="40" Y="8"/>
+        <TopLine Value="40"/>
+        <CursorPos X="16" Y="58"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
