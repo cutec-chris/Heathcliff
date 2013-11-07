@@ -577,13 +577,13 @@ end;
 procedure TFormSketchpad.FormMouseWheelDown(Sender: TObject;
   Shift: TShiftState; MousePos: TPoint; var Handled: Boolean);
 begin
-   ZoomIn(MousePos.x,MousePos.y);
+   ZoomOut(MousePos.x,MousePos.y);
 end;
 
 procedure TFormSketchpad.FormMouseWheelUp(Sender: TObject; Shift: TShiftState;
   MousePos: TPoint; var Handled: Boolean);
 begin
-   ZoomOut(MousePos.x,MousePos.y);
+   ZoomIn(MousePos.x,MousePos.y);
 end;
 
 procedure TFormSketchpad.iTopRulerMouseDown(Sender: TObject;
