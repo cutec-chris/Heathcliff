@@ -914,22 +914,6 @@ begin
    if f<>nil then begin
       th := FormSketchpad.iTopRuler.Height;
       lw := FormSketchpad.iLeftRuler.Width;
-      {with cv do begin
-         x := (f.RotCenter.x*ZoomFactor-FormSketchpad.sbX.Position);
-         y := (f.RotCenter.y*ZoomFactor-FormSketchpad.sbY.Position);
-         Pen.Width := 2; Pen.Color := MyOtherColors[myoc_rotcenter]; Pen.Style := psSolid;
-         MoveTo(x-5,y-5); LineTo(x+6,y+6);
-         MoveTo(x-5,y+6); LineTo(x+6,y-5);
-         Pen.Width := 1;
-         x := (f.AuxCenter.x*ZoomFactor-FormSketchpad.sbX.Position);
-         y := (f.AuxCenter.y*ZoomFactor-FormSketchpad.sbY.Position);
-         MoveTo(x-5,y-5); LineTo(x+6,y+6);
-         MoveTo(x-5,y+6); LineTo(x+6,y-5);
-         Pen.Style := psDot;
-         MoveTo((f.RotCenter.x*ZoomFactor-FormSketchpad.sbX.Position),(f.RotCenter.y*ZoomFactor-FormSketchpad.sbY.Position));
-         LineTo((f.AuxCenter.x*ZoomFactor-FormSketchpad.sbX.Position),(f.AuxCenter.y*ZoomFactor-FormSketchpad.sbY.Position));
-         Pen.Color := clLines;
-      end;}
       with cv do begin
          Pen.Width := 1;
          Pen.Style := psDot;
@@ -1257,21 +1241,7 @@ begin
          end;
       end;
       Drawing := false;
-   end; // if yog<>nil
-   (*
-   if (not LicenseAgree) and (Assigned(FormLicense) then begin
-      FormLicense.Hide;
-      if FormLicense.ShowModal = mrOK then begin
-         LicenseAgree := true;
-         FormLicense.key := '\SOFTWARE\PepiMK Software\Heathcliff';
-         FormLicense.SetValue('LicenseAgree',true);
-      end else begin
-         FormLicense.key := '\SOFTWARE\PepiMK Software\Heathcliff';
-         FormLicense.SetValue('LicenseAgree',false);
-         Application.Terminate;
-      end;
    end;
-   *)
    TimeLineRedraw;
 end;
 

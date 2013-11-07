@@ -3,7 +3,7 @@
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="22">
+    <Units Count="23">
       <Unit0>
         <Filename Value="Heathcliff.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -22,6 +22,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormUnitStatus"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="12"/>
         <WindowIndex Value="0"/>
         <TopLine Value="29"/>
@@ -265,140 +266,143 @@
         <Filename Value="ulaserframes.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uLaserFrames"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="10"/>
         <WindowIndex Value="0"/>
         <TopLine Value="40"/>
-        <CursorPos X="16" Y="58"/>
-        <UsageCount Value="20"/>
+        <CursorPos X="15" Y="55"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit21>
+      <Unit22>
+        <Filename Value="../promet/promet/source/components/jvdesign/jvtypes.pas"/>
+        <UnitName Value="JvTypes"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="149"/>
+        <CursorPos X="14" Y="149"/>
+        <UsageCount Value="10"/>
+      </Unit22>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="4" Column="71" TopLine="1"/>
+        <Caret Line="18" Column="37" TopLine="1"/>
       </Position1>
       <Position2>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="18" Column="37" TopLine="1"/>
+        <Caret Line="20" Column="12" TopLine="1"/>
       </Position2>
       <Position3>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="20" Column="12" TopLine="1"/>
+        <Caret Line="27" Column="8" TopLine="1"/>
       </Position3>
       <Position4>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="27" Column="8" TopLine="1"/>
+        <Caret Line="568" Column="15" TopLine="551"/>
       </Position4>
       <Position5>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="568" Column="15" TopLine="551"/>
+        <Caret Line="3369" Column="25" TopLine="3342"/>
       </Position5>
       <Position6>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="3369" Column="25" TopLine="3342"/>
+        <Caret Line="102" Column="1" TopLine="75"/>
       </Position6>
       <Position7>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="102" Column="1" TopLine="75"/>
+        <Caret Line="529" Column="42" TopLine="501"/>
       </Position7>
       <Position8>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="529" Column="42" TopLine="501"/>
+        <Caret Line="533" Column="36" TopLine="505"/>
       </Position8>
       <Position9>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="533" Column="36" TopLine="505"/>
+        <Caret Line="534" Column="25" TopLine="515"/>
       </Position9>
       <Position10>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="534" Column="25" TopLine="515"/>
+        <Caret Line="538" Column="32" TopLine="515"/>
       </Position10>
       <Position11>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="538" Column="32" TopLine="515"/>
+        <Caret Line="559" Column="43" TopLine="544"/>
       </Position11>
       <Position12>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="559" Column="43" TopLine="544"/>
+        <Caret Line="560" Column="39" TopLine="544"/>
       </Position12>
       <Position13>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="560" Column="39" TopLine="544"/>
+        <Caret Line="561" Column="39" TopLine="544"/>
       </Position13>
       <Position14>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="561" Column="39" TopLine="544"/>
+        <Caret Line="562" Column="48" TopLine="544"/>
       </Position14>
       <Position15>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="562" Column="48" TopLine="544"/>
+        <Caret Line="566" Column="56" TopLine="544"/>
       </Position15>
       <Position16>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="566" Column="56" TopLine="544"/>
+        <Caret Line="567" Column="58" TopLine="544"/>
       </Position16>
       <Position17>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="567" Column="58" TopLine="544"/>
+        <Caret Line="572" Column="41" TopLine="545"/>
       </Position17>
       <Position18>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="572" Column="41" TopLine="545"/>
+        <Caret Line="573" Column="59" TopLine="546"/>
       </Position18>
       <Position19>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="573" Column="59" TopLine="546"/>
+        <Caret Line="574" Column="41" TopLine="547"/>
       </Position19>
       <Position20>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="574" Column="41" TopLine="547"/>
+        <Caret Line="714" Column="48" TopLine="701"/>
       </Position20>
       <Position21>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="714" Column="48" TopLine="701"/>
+        <Caret Line="26" Column="57" TopLine="18"/>
       </Position21>
       <Position22>
-        <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="26" Column="57" TopLine="18"/>
-      </Position22>
-      <Position23>
         <Filename Value="ulaserframes.pas"/>
         <Caret Line="10" Column="5" TopLine="1"/>
+      </Position22>
+      <Position23>
+        <Filename Value="FormUnitMain.pas"/>
+        <Caret Line="40" Column="62" TopLine="16"/>
       </Position23>
       <Position24>
         <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="40" Column="62" TopLine="16"/>
+        <Caret Line="41" Column="34" TopLine="16"/>
       </Position24>
       <Position25>
-        <Filename Value="FormUnitMain.pas"/>
-        <Caret Line="41" Column="34" TopLine="16"/>
+        <Filename Value="ulaserframes.pas"/>
+        <Caret Line="16" Column="3" TopLine="2"/>
       </Position25>
       <Position26>
         <Filename Value="ulaserframes.pas"/>
-        <Caret Line="16" Column="3" TopLine="2"/>
+        <Caret Line="8" Column="22" TopLine="1"/>
       </Position26>
       <Position27>
-        <Filename Value="ulaserframes.pas"/>
-        <Caret Line="8" Column="22" TopLine="1"/>
-      </Position27>
-      <Position28>
         <Filename Value="FormUnitHelpLines.pas"/>
         <Caret Line="43" Column="1" TopLine="70"/>
-      </Position28>
-      <Position29>
+      </Position27>
+      <Position28>
         <Filename Value="FormUnitPad.pas"/>
         <Caret Line="87" Column="17" TopLine="70"/>
-      </Position29>
-      <Position30>
+      </Position28>
+      <Position29>
         <Filename Value="FormUnitImport.pas"/>
         <Caret Line="15" Column="81" TopLine="1"/>
-      </Position30>
+      </Position29>
     </JumpHistory>
   </ProjectSession>
   <EditorMacros Count="0"/>
